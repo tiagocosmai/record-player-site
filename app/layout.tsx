@@ -129,7 +129,7 @@ export default function RootLayout({
                   <li>
                     <Link href="/criar-labels" className="text-wood-200 hover:text-music-gold transition-colors flex items-center">
                       <span className="mr-2">🎨</span>
-                      Criar Labels e Capas
+                      Criar Capas de Discos
                     </Link>
                   </li>
                 </ul>

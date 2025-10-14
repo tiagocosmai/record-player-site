@@ -187,7 +187,7 @@ export default function CriarLabelsPage() {
         <div className="text-center mb-12">
           <div className="text-7xl mb-4">🎨</div>
           <h1 className="text-5xl font-display font-bold mb-4 gradient-text">
-            Gerador de Labels e Capas
+            Gerador de Capas de Discos
           </h1>
           <p className="text-xl text-vinyl-700 max-w-3xl mx-auto">
             Faça upload de suas imagens, ajuste o crop e gere um PDF pronto para impressão!

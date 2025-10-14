@@ -74,44 +74,8 @@ export default function Home() {
             href="/criar-labels" 
             className="btn-happy bg-gradient-to-r from-music-gold to-label-yellow text-xl px-8 py-4 shadow-xl shadow-music-gold/30"
           >
-            Criar Labels 🎨
+            Criar Capas de Discos 🎨
           </Link>
-        </div>
-      </section>
-
-      {/* Features */}
-      <section className="grid md:grid-cols-3 gap-8 mb-20">
-        <div className="card-happy p-8 text-center hover:scale-105 transition-transform border-t-4 border-label-blue">
-          <div className="text-6xl mb-4">📐</div>
-          <h3 className="text-2xl font-display font-bold mb-3 text-label-blue">
-            Moldes Detalhados
-          </h3>
-          <p className="text-vinyl-600">
-            Templates com medidas exatas de todas as peças. 
-            Basta imprimir e transferir para o papelão!
-          </p>
-        </div>
-
-        <div className="card-happy p-8 text-center hover:scale-105 transition-transform border-t-4 border-label-red">
-          <div className="text-6xl mb-4">🎨</div>
-          <h3 className="text-2xl font-display font-bold mb-3 text-label-red">
-            Visualizações 3D
-          </h3>
-          <p className="text-vinyl-600">
-            Explore vistas interativas em 3D! Veja todas as 
-            partes da vitrola antes de construir.
-          </p>
-        </div>
-
-        <div className="card-happy p-8 text-center hover:scale-105 transition-transform border-t-4 border-music-gold">
-          <div className="text-6xl mb-4">📚</div>
-          <h3 className="text-2xl font-display font-bold mb-3 text-music-gold">
-            Guias Completos
-          </h3>
-          <p className="text-vinyl-600">
-            Instruções passo a passo, lista de materiais, 
-            dicas e soluções de problemas comuns.
-          </p>
         </div>
       </section>
 
@@ -301,7 +265,7 @@ export default function Home() {
           <Link href="/criar-labels" className="card-happy p-8 hover:scale-105 transition-transform group max-w-md w-full">
             <div className="text-6xl mb-4 text-center">🎨</div>
             <h3 className="text-2xl font-display font-bold mb-3 text-gray-800 group-hover:text-purple-600 text-center">
-              Gerador de Labels
+              Gerador de Capas de Discos
             </h3>
             <p className="text-gray-600 text-center text-lg">
               Crie capas e rótulos personalizados para seus discos!
