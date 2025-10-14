@@ -1,0 +1,505 @@
+# EXEMPLOS PRONTOS - Capas e Rótulos
+
+## Use estes exemplos como referência ou copie/adapte!
+
+═══════════════════════════════════════════
+         10 EXEMPLOS PRONTOS PARA USAR
+═══════════════════════════════════════════
+
+
+╔═══════════════════════════════════════════════════════════╗
+║  EXEMPLO 1: THE BEATLES - "HEY JUDE"                      ║
+╚═══════════════════════════════════════════════════════════╝
+
+CAPA - FRENTE:
+┌─────────────────────────────────────┐
+│                                     │
+│  ┌───────────────────────────────┐  │
+│  │                               │  │
+│  │  [FOTO: The Beatles em P&B]  │  │
+│  │   (Four Faces Portrait)       │  │
+│  │                               │  │
+│  └───────────────────────────────┘  │
+│                                     │
+│  ─────────────────────────────────  │
+│                                     │
+│         THE BEATLES                 │
+│                                     │
+│        "Hey Jude"                   │
+│                                     │
+│  ⊙ 45 RPM    •    1968             │
+│                                     │
+│      🍎 APPLE RECORDS               │
+│                                     │
+└─────────────────────────────────────┘
+
+CAPA - VERSO:
+┌─────────────────────────────────────┐
+│                                     │
+│  LADO A                             │
+│  1. Hey Jude ................. 7:11 │
+│                                     │
+│  LADO B                             │
+│  1. Revolution ............... 3:24 │
+│                                     │
+│  ─────────────────────────────────  │
+│                                     │
+│  Artista: The Beatles               │
+│  Produção: George Martin            │
+│  Gravadora: Apple Records           │
+│  Ano: 1968                          │
+│  Catálogo: APPLE-2276               │
+│                                     │
+│  © 1968 Apple Records Ltd.          │
+│                                     │
+└─────────────────────────────────────┘
+
+RÓTULO - LADO A:
+    ╱─────────────────────╲
+   │  🍎 APPLE RECORDS 🍎  │
+  │       ─────────        │
+  │        45 RPM          │
+ │                          │
+ │    ╱─────────╮          │
+ │   │    ●     │          │
+ │    ╲─────────╯          │
+ │                          │
+ │    "Hey Jude"            │
+ │                          │
+  │   THE BEATLES          │
+  │                        │
+   │  SIDE A  •  7:11     │
+    ╲─────────────────────╯
+
+
+╔═══════════════════════════════════════════════════════════╗
+║  EXEMPLO 2: ARETHA FRANKLIN - "RESPECT"                   ║
+╚═══════════════════════════════════════════════════════════╝
+
+CAPA - FRENTE:
+┌─────────────────────────────────────┐
+│  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  │
+│  ▓                               ▓  │
+│  ▓  [FOTO: Aretha Franklin]     ▓  │
+│  ▓   (Close-up, sorrindo)       ▓  │
+│  ▓                               ▓  │
+│  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  │
+│                                     │
+│  ═══════════════════════════════    │
+│                                     │
+│      ARETHA FRANKLIN                │
+│                                     │
+│         "Respect"                   │
+│                                     │
+│  ⊙ 45 RPM    •    1967             │
+│                                     │
+│     ATLANTIC RECORDS                │
+│                                     │
+└─────────────────────────────────────┘
+
+RÓTULO - LADO A:
+    ╱─────────────────────╲
+   │ ★ ATLANTIC RECORDS ★ │
+  │   ════════════════     │
+  │        45 RPM          │
+ │                          │
+ │    ╱─────────╮          │
+ │   │    ●     │          │
+ │    ╲─────────╯          │
+ │                          │
+ │    "RESPECT"             │
+ │                          │
+  │  ARETHA FRANKLIN       │
+  │                        │
+   │  SIDE A  •  2:28     │
+    ╲─────────────────────╯
+
+
+╔═══════════════════════════════════════════════════════════╗
+║  EXEMPLO 3: TOM JOBIM - "GAROTA DE IPANEMA"               ║
+╚═══════════════════════════════════════════════════════════╝
+
+CAPA - FRENTE:
+┌─────────────────────────────────────┐
+│  ≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈  │
+│  ≈                               ≈  │
+│  ≈  [ILUSTRAÇÃO: Praia/Mar]     ≈  │
+│  ≈   (Cores pastéis)            ≈  │
+│  ≈                               ≈  │
+│  ≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈  │
+│                                     │
+│  ───────────────────────────────    │
+│                                     │
+│          TOM JOBIM                  │
+│                                     │
+│     "Garota de Ipanema"             │
+│                                     │
+│  ⊙ 45 RPM    •    1964             │
+│                                     │
+│       VERVE RECORDS                 │
+│                                     │
+└─────────────────────────────────────┘
+
+RÓTULO - LADO A:
+    ╱─────────────────────╲
+   │  ≈ VERVE RECORDS ≈   │
+  │   ════════════════     │
+  │        45 RPM          │
+ │                          │
+ │    ╱─────────╮          │
+ │   │    ●     │          │
+ │    ╲─────────╯          │
+ │                          │
+ │ "Garota de Ipanema"      │
+ │                          │
+  │     TOM JOBIM          │
+  │                        │
+   │  LADO A  •  2:45     │
+    ╲─────────────────────╯
+
+
+╔═══════════════════════════════════════════════════════════╗
+║  EXEMPLO 4: LED ZEPPELIN - "STAIRWAY TO HEAVEN"           ║
+╚═══════════════════════════════════════════════════════════╝
+
+CAPA - FRENTE:
+┌─────────────────────────────────────┐
+│  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  │
+│  ░                               ░  │
+│  ░  [ARTE: Misteriosa/Rúnica]   ░  │
+│  ░   (P&B com detalhes)         ░  │
+│  ░                               ░  │
+│  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  │
+│                                     │
+│  ═══════════════════════════════    │
+│                                     │
+│        LED ZEPPELIN                 │
+│                                     │
+│    "Stairway to Heaven"             │
+│                                     │
+│  ⊙ 45 RPM    •    1971             │
+│                                     │
+│      ATLANTIC RECORDS               │
+│                                     │
+└─────────────────────────────────────┘
+
+
+╔═══════════════════════════════════════════════════════════╗
+║  EXEMPLO 5: LEGIÃO URBANA - "FAROESTE CABOCLO"            ║
+╚═══════════════════════════════════════════════════════════╝
+
+CAPA - FRENTE:
+┌─────────────────────────────────────┐
+│  ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒  │
+│  ▒                               ▒  │
+│  ▒  [FOTO: Banda]               ▒  │
+│  ▒   (Brasília ao fundo)        ▒  │
+│  ▒                               ▒  │
+│  ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒  │
+│                                     │
+│  ───────────────────────────────    │
+│                                     │
+│       LEGIÃO URBANA                 │
+│                                     │
+│     "Faroeste Caboclo"              │
+│                                     │
+│  ⊙ 33⅓ RPM   •    1987             │
+│                                     │
+│          EMI-ODEON                  │
+│                                     │
+└─────────────────────────────────────┘
+
+RÓTULO - LADO A:
+    ╱─────────────────────╲
+   │   ▓ EMI-ODEON ▓      │
+  │   ══════════════       │
+  │        33⅓ RPM         │
+ │                          │
+ │    ╱─────────╮          │
+ │   │    ●     │          │
+ │    ╲─────────╯          │
+ │                          │
+ │ "Faroeste Caboclo"       │
+ │                          │
+  │   LEGIÃO URBANA        │
+  │                        │
+   │  LADO A  •  9:03     │
+    ╲─────────────────────╯
+
+
+╔═══════════════════════════════════════════════════════════╗
+║  EXEMPLO 6: QUEEN - "BOHEMIAN RHAPSODY"                   ║
+╚═══════════════════════════════════════════════════════════╝
+
+CAPA - FRENTE:
+┌─────────────────────────────────────┐
+│  ◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆  │
+│  ◆                               ◆  │
+│  ◆  [FOTO: Queen - Iluminação]  ◆  │
+│  ◆   (Dramática, 4 membros)     ◆  │
+│  ◆                               ◆  │
+│  ◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆  │
+│                                     │
+│  ═══════════════════════════════    │
+│                                     │
+│            QUEEN                    │
+│                                     │
+│     "Bohemian Rhapsody"             │
+│                                     │
+│  ⊙ 45 RPM    •    1975             │
+│                                     │
+│         EMI RECORDS                 │
+│                                     │
+└─────────────────────────────────────┘
+
+
+╔═══════════════════════════════════════════════════════════╗
+║  EXEMPLO 7: MICHAEL JACKSON - "BILLIE JEAN"               ║
+╚═══════════════════════════════════════════════════════════╝
+
+CAPA - FRENTE:
+┌─────────────────────────────────────┐
+│  ███████████████████████████████    │
+│  █                             █    │
+│  █  [FOTO: Michael Jackson]   █    │
+│  █   (Pose icônica)           █    │
+│  █                             █    │
+│  ███████████████████████████████    │
+│                                     │
+│  ═══════════════════════════════    │
+│                                     │
+│       MICHAEL JACKSON               │
+│                                     │
+│        "Billie Jean"                │
+│                                     │
+│  ⊙ 45 RPM    •    1983             │
+│                                     │
+│         EPIC RECORDS                │
+│                                     │
+└─────────────────────────────────────┘
+
+RÓTULO - LADO A:
+    ╱─────────────────────╲
+   │   ★ EPIC RECORDS ★   │
+  │   ══════════════       │
+  │        45 RPM          │
+ │                          │
+ │    ╱─────────╮          │
+ │   │    ●     │          │
+ │    ╲─────────╯          │
+ │                          │
+ │   "BILLIE JEAN"          │
+ │                          │
+  │  MICHAEL JACKSON       │
+  │                        │
+   │  SIDE A  •  4:54     │
+    ╲─────────────────────╯
+
+
+╔═══════════════════════════════════════════════════════════╗
+║  EXEMPLO 8: PINK FLOYD - "ANOTHER BRICK IN THE WALL"      ║
+╚═══════════════════════════════════════════════════════════╝
+
+CAPA - FRENTE:
+┌─────────────────────────────────────┐
+│  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  │
+│  ▓  ╔═══════════════════════╗  ▓  │
+│  ▓  ║                       ║  ▓  │
+│  ▓  ║  [ILUSTRAÇÃO: MURO]  ║  ▓  │
+│  ▓  ║   (Arte conceitual)   ║  ▓  │
+│  ▓  ║                       ║  ▓  │
+│  ▓  ╚═══════════════════════╝  ▓  │
+│  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  │
+│                                     │
+│          PINK FLOYD                 │
+│                                     │
+│  "Another Brick in the Wall Pt.2"  │
+│                                     │
+│  ⊙ 45 RPM    •    1979             │
+│                                     │
+│      HARVEST RECORDS                │
+│                                     │
+└─────────────────────────────────────┘
+
+
+╔═══════════════════════════════════════════════════════════╗
+║  EXEMPLO 9: ELIS REGINA - "ÁGUAS DE MARÇO"                ║
+╚═══════════════════════════════════════════════════════════╝
+
+CAPA - FRENTE:
+┌─────────────────────────────────────┐
+│  ≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈  │
+│  ≈                               ≈  │
+│  ≈  [FOTO: Elis Regina]         ≈  │
+│  ≈   (Sorrindo, colorida)       ≈  │
+│  ≈                               ≈  │
+│  ≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈  │
+│                                     │
+│  ───────────────────────────────    │
+│                                     │
+│         ELIS REGINA                 │
+│                                     │
+│      "Águas de Março"               │
+│                                     │
+│  ⊙ 45 RPM    •    1974             │
+│                                     │
+│      PHILIPS RECORDS                │
+│                                     │
+└─────────────────────────────────────┘
+
+RÓTULO - LADO A:
+    ╱─────────────────────╲
+   │  ≈ PHILIPS RECORDS ≈ │
+  │   ══════════════       │
+  │        45 RPM          │
+ │                          │
+ │    ╱─────────╮          │
+ │   │    ●     │          │
+ │    ╲─────────╯          │
+ │                          │
+ │  "Águas de Março"        │
+ │                          │
+  │    ELIS REGINA         │
+  │                        │
+   │  LADO A  •  3:18     │
+    ╲─────────────────────╯
+
+
+╔═══════════════════════════════════════════════════════════╗
+║  EXEMPLO 10: DAVID BOWIE - "SPACE ODDITY"                 ║
+╚═══════════════════════════════════════════════════════════╝
+
+CAPA - FRENTE:
+┌─────────────────────────────────────┐
+│  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  │
+│  ░  ★                       ★    ░  │
+│  ░     [ILUSTRAÇÃO: Espaço]      ░  │
+│  ░  ★   (Astronauta/Estrelas) ★ ░  │
+│  ░                               ░  │
+│  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  │
+│                                     │
+│  ═══════════════════════════════    │
+│                                     │
+│          DAVID BOWIE                │
+│                                     │
+│       "Space Oddity"                │
+│                                     │
+│  ⊙ 45 RPM    •    1969             │
+│                                     │
+│      PHILIPS RECORDS                │
+│                                     │
+└─────────────────────────────────────┘
+
+RÓTULO - LADO A:
+    ╱─────────────────────╲
+   │  ★ PHILIPS RECORDS ★ │
+  │   ══════════════       │
+  │        45 RPM          │
+ │                          │
+ │    ╱─────────╮          │
+ │   │    ●     │          │
+ │    ╲─────────╯          │
+ │                          │
+ │   "Space Oddity"         │
+ │                          │
+  │    DAVID BOWIE         │
+  │                        │
+   │  SIDE A  •  5:18     │
+    ╲─────────────────────╯
+
+
+═══════════════════════════════════════════════════════════
+            DICAS PARA USAR ESTES EXEMPLOS
+═══════════════════════════════════════════════════════════
+
+1. COPIE O TEXTO
+   - Copie a estrutura que mais gostar
+   - Substitua com suas informações
+
+2. BUSQUE IMAGENS
+   - Google Imagens (alta resolução)
+   - Wikimedia Commons (uso livre)
+   - Unsplash (fotos gratuitas)
+
+3. USE UM EDITOR
+   - Canva (mais fácil)
+   - Photoshop/GIMP (mais controle)
+   - Word/PowerPoint (simples)
+
+4. AJUSTE AS CORES
+   - Rock: Preto/Branco, Vermelho
+   - Soul: Laranja, Dourado
+   - MPB: Verde, Azul
+   - Pop: Cores vivas
+
+5. ESCOLHA FONTES
+   - Vintage: Serif clássicas
+   - Moderno: Sans-serif
+   - Rock: Bold, impactante
+   - Elegante: Script, cursiva
+
+
+═══════════════════════════════════════════════════════════
+          SUGESTÕES DE GRAVADORAS FICTÍCIAS
+          (Para usar em seus próprios designs)
+═══════════════════════════════════════════════════════════
+
+1. VINTAGE RECORDS
+   Logo: VR em círculo
+   Estilo: Clássico anos 60
+
+2. GOLDEN SOUND
+   Logo: Estrela dourada
+   Estilo: Soul/Motown
+
+3. SCHOOL RECORDS
+   Logo: [Nome da Escola]
+   Estilo: Moderno/Educacional
+
+4. RETRO VIBES
+   Logo: Onda sonora
+   Estilo: Anos 70/80
+
+5. CLASSIC HITS
+   Logo: Nota musical
+   Estilo: Universal/Atemporal
+
+
+═══════════════════════════════════════════════════════════
+                    CHECKLIST FINAL
+═══════════════════════════════════════════════════════════
+
+Antes de imprimir suas capas e rótulos:
+
+DESIGN:
+□ Todas as informações estão corretas
+□ Imagens em alta qualidade (mínimo 300 DPI)
+□ Cores não muito escuras (economiza tinta)
+□ Texto legível e bem posicionado
+□ Margens respeitadas
+
+IMPRESSÃO:
+□ Papel de qualidade (120-180g para capas)
+□ Papel adesivo para rótulos (ou comum + cola)
+□ Configuração de impressora: Alta qualidade
+□ Fiz teste em papel comum primeiro
+
+MONTAGEM:
+□ Cortei com precisão (régua + estilete)
+□ Dobrei no lugar certo
+□ Rótulos centralizados
+□ Cola aplicada uniformemente
+□ Deixei secar completamente
+
+RESULTADO:
+□ Capas acomodam os discos perfeitamente
+□ Rótulos bem colados e sem bolhas
+□ Aparência profissional
+□ Prontos para exibir na vitrola!
+
+
+═══════════════════════════════════════════════════════════
+   Use estes exemplos como inspiração e crie os seus!
+            Seu projeto ficará incrível! 🎵📀✨
+═══════════════════════════════════════════════════════════
+

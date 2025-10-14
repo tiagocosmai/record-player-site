@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="900" viewBox="0 0 900 900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradiente para profundidade -->
+    <radialGradient id="discGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#fff;stop-opacity:1" />
+      <stop offset="85%" style="stop-color:#f5f5f5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ddd;stop-opacity:1" />
+    </radialGradient>
+    
+    <!-- Sombra -->
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Círculo externo (9cm = 900px a 100 DPI) -->
+  <circle cx="450" cy="450" r="450" fill="url(#discGradient)" filter="url(#shadow)"/>
+  
+  <!-- Borda externa -->
+  <circle cx="450" cy="450" r="448" fill="none" stroke="#333" stroke-width="2"/>
+  
+  <!-- Círculo interno (furo - 4cm = 400px) -->
+  <circle cx="450" cy="450" r="200" fill="#fff" stroke="#888" stroke-width="2"/>
+  
+  <!-- Logo/Gravadora no topo -->
+  <text x="450" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="40" font-weight="bold" fill="#c41e3a">
+    ★ VINTAGE RECORDS ★
+  </text>
+  
+  <line x1="300" y1="200" x2="600" y2="200" stroke="#c41e3a" stroke-width="2"/>
+  
+  <!-- Velocidade -->
+  <text x="450" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#333">
+    45 RPM
+  </text>
+  
+  <!-- Título da música (abaixo do furo) -->
+  <text x="450" y="680" text-anchor="middle" font-family="Georgia, serif" font-size="44" font-weight="bold" fill="#000">
+    "Hey Jude"
+  </text>
+  
+  <!-- Artista -->
+  <text x="450" y="730" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" fill="#333">
+    THE BEATLES
+  </text>
+  
+  <!-- Informações adicionais -->
+  <text x="450" y="780" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#666">
+    SIDE A  •  7:11
+  </text>
+  
+  <text x="450" y="810" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#999">
+    Cat. No: VR-1968-01
+  </text>
+  
+  <!-- Linhas decorativas -->
+  <circle cx="450" cy="450" r="230" fill="none" stroke="#ddd" stroke-width="1"/>
+  <circle cx="450" cy="450" r="420" fill="none" stroke="#ddd" stroke-width="1"/>
+</svg>
+

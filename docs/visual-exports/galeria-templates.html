@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Templates - Capas e Rótulos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .gallery {
+            padding: 40px;
+        }
+        
+        .template-section {
+            margin-bottom: 60px;
+        }
+        
+        .template-section h2 {
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .template-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .template-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .template-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        }
+        
+        .template-card h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .template-image {
+            width: 100%;
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            background: white;
+        }
+        
+        .template-info {
+            margin-top: 15px;
+            padding: 10px;
+            background: white;
+            border-radius: 8px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        
+        .download-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin-top: 15px;
+            background: #667eea;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        
+        .download-btn:hover {
+            background: #5568d3;
+        }
+        
+        .instructions {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+        
+        .instructions h3 {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+        
+        .instructions ul {
+            margin-left: 20px;
+            color: #856404;
+            line-height: 1.8;
+        }
+        
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .tip-box {
+            background: #e7f3ff;
+            border-left: 4px solid #2196F3;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .tip-box h4 {
+            color: #1976D2;
+            margin-bottom: 8px;
+        }
+        
+        .tip-box p {
+            color: #1976D2;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎨 Galeria de Templates</h1>
+            <p style="font-size: 1.2em; margin-top: 10px;">Capas e Rótulos para Discos de 7"</p>
+            <p style="margin-top: 15px; opacity: 0.9;">Todos os arquivos SVG prontos para usar!</p>
+        </header>
+        
+        <div class="gallery">
+            <div class="instructions">
+                <h3>📖 Como Usar Esta Galeria</h3>
+                <ul>
+                    <li><strong>Visualize</strong> os templates diretamente no navegador</li>
+                    <li><strong>Clique com botão direito</strong> na imagem → "Salvar imagem como..."</li>
+                    <li><strong>Ou clique</strong> no botão "Baixar SVG" para abrir em nova aba</li>
+                    <li><strong>Edite</strong> no Canva, Photopea, Inkscape ou qualquer editor</li>
+                </ul>
+            </div>
+            
+            <!-- Seção Rótulos -->
+            <div class="template-section">
+                <h2>🎵 Rótulos de Disco (⌀ 9 cm)</h2>
+                
+                <div class="template-grid">
+                    <!-- Rótulo 1 -->
+                    <div class="template-card">
+                        <h3>Rock Clássico</h3>
+                        <img src="rotulo-exemplo.svg" alt="Rótulo Rock" class="template-image">
+                        <div class="template-info">
+                            <strong>Artista:</strong> The Beatles<br>
+                            <strong>Música:</strong> "Hey Jude"<br>
+                            <strong>Estilo:</strong> Vintage Records<br>
+                            <strong>Cores:</strong> Vermelho e branco
+                        </div>
+                        <a href="rotulo-exemplo.svg" class="download-btn" target="_blank">Baixar SVG</a>
+                    </div>
+                    
+                    <!-- Rótulo 2 -->
+                    <div class="template-card">
+                        <h3>MPB/Bossa Nova</h3>
+                        <img src="rotulo-mpb-exemplo.svg" alt="Rótulo MPB" class="template-image">
+                        <div class="template-info">
+                            <strong>Artista:</strong> Tom Jobim<br>
+                            <strong>Música:</strong> "Garota de Ipanema"<br>
+                            <strong>Estilo:</strong> Bossa Records<br>
+                            <strong>Cores:</strong> Verde e amarelo
+                        </div>
+                        <a href="rotulo-mpb-exemplo.svg" class="download-btn" target="_blank">Baixar SVG</a>
+                    </div>
+                </div>
+                
+                <div class="tip-box">
+                    <h4>💡 Dica para Rótulos</h4>
+                    <p>Imprima em <strong>papel adesivo circular</strong> ou papel comum + cola. Dimensão: <strong>9 cm de diâmetro</strong> com furo central de <strong>4 cm</strong>. Use compasso para cortar círculos perfeitos!</p>
+                </div>
+            </div>
+            
+            <!-- Seção Capas -->
+            <div class="template-section">
+                <h2>📀 Capas de Disco (18,5 x 37 cm)</h2>
+                
+                <div class="template-grid">
+                    <!-- Capa 1 -->
+                    <div class="template-card">
+                        <h3>Capa Completa</h3>
+                        <img src="capa-exemplo.svg" alt="Capa Completa" class="template-image" style="max-height: 400px; object-fit: contain;">
+                        <div class="template-info">
+                            <strong>Artista:</strong> The Beatles<br>
+                            <strong>Música:</strong> "Hey Jude"<br>
+                            <strong>Inclui:</strong> Frente e verso<br>
+                            <strong>Dimensões:</strong> 18,5 x 37 cm (dobra ao meio)
+                        </div>
+                        <a href="capa-exemplo.svg" class="download-btn" target="_blank">Baixar SVG</a>
+                    </div>
+                </div>
+                
+                <div class="tip-box">
+                    <h4>💡 Dica para Capas</h4>
+                    <p>Imprima em <strong>papel cartolina 120-180g</strong> ou papel fotográfico. A capa é <strong>18,5 x 37 cm</strong> e dobra ao meio na linha tracejada. Cole as laterais, deixando o topo aberto para inserir o disco!</p>
+                </div>
+            </div>
+            
+            <!-- Seção Conversão -->
+            <div class="template-section">
+                <h2>🔄 Como Converter para PNG/JPG</h2>
+                
+                <div class="instructions">
+                    <h3>Método 1: Navegador (Mais Fácil) ⭐</h3>
+                    <ul>
+                        <li>Clique com botão direito na imagem acima</li>
+                        <li>Selecione "Salvar imagem como..."</li>
+                        <li>Escolha PNG (melhor qualidade) ou JPG</li>
+                        <li>Pronto!</li>
+                    </ul>
+                </div>
+                
+                <div class="instructions" style="background: #d4edda; border-left-color: #28a745;">
+                    <h3 style="color: #155724;">Método 2: Ferramentas Online</h3>
+                    <ul style="color: #155724;">
+                        <li><strong>CloudConvert.com</strong> - Converte SVG para PNG/JPG gratuitamente</li>
+                        <li><strong>Photopea.com</strong> - Editor online, abre SVG e exporta em qualquer formato</li>
+                        <li><strong>Canva.com</strong> - Importe SVG, edite e baixe como PNG</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Seção Personalização -->
+            <div class="template-section">
+                <h2>✏️ Como Personalizar</h2>
+                
+                <div class="tip-box">
+                    <h4>🎨 Editando Textos e Cores</h4>
+                    <p>
+                        <strong>Passo 1:</strong> Clique com botão direito no arquivo SVG → "Abrir com" → Bloco de Notas ou VS Code<br>
+                        <strong>Passo 2:</strong> Procure por <code>&lt;text&gt;</code> e altere o texto entre as tags<br>
+                        <strong>Passo 3:</strong> Procure por <code>fill="#cor"</code> e altere o código de cor (ex: #e74c3c para vermelho)<br>
+                        <strong>Passo 4:</strong> Salve e recarregue no navegador!
+                    </p>
+                </div>
+                
+                <div class="instructions">
+                    <h3>Códigos de Cores Úteis</h3>
+                    <ul>
+                        <li><strong>#e74c3c</strong> - Vermelho</li>
+                        <li><strong>#3498db</strong> - Azul</li>
+                        <li><strong>#2ecc71</strong> - Verde</li>
+                        <li><strong>#f39c12</strong> - Amarelo/Laranja</li>
+                        <li><strong>#9b59b6</strong> - Roxo</li>
+                        <li><strong>#1abc9c</strong> - Turquesa</li>
+                        <li><strong>#e91e63</strong> - Rosa</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Seção Vitrola Interativa -->
+            <div class="template-section" style="background: linear-gradient(135deg, #667eea22 0%, #764ba222 100%); padding: 30px; border-radius: 15px;">
+                <h2>🎪 Visualização Interativa da Vitrola</h2>
+                <p style="font-size: 1.1em; margin-bottom: 20px; color: #555;">
+                    Quer ver a vitrola completa em todas as vistas? Temos um arquivo HTML interativo!
+                </p>
+                <a href="vitrola-interativa.html" style="display: inline-block; padding: 15px 30px; background: #667eea; color: white; text-decoration: none; border-radius: 10px; font-weight: 600; font-size: 1.1em;">
+                    🚀 Abrir Vitrola Interativa
+                </a>
+                <p style="margin-top: 15px; color: #666;">
+                    Inclui: Vista Frontal, Lateral, Superior e Vista Explodida com todas as medidas!
+                </p>
+            </div>
+        </div>
+        
+        <footer>
+            <h3>📁 Arquivos Disponíveis</h3>
+            <p style="margin: 15px 0;">
+                ✓ rotulo-exemplo.svg (Rock Clássico)<br>
+                ✓ rotulo-mpb-exemplo.svg (MPB/Bossa)<br>
+                ✓ capa-exemplo.svg (Capa Completa)<br>
+                ✓ vitrola-interativa.html (Visualização 3D)
+            </p>
+            <p style="margin-top: 20px; font-size: 0.9em; opacity: 0.8;">
+                💡 Todos os arquivos são SVG (vetoriais) - podem ser ampliados sem perder qualidade!<br>
+                Use Ctrl+S para salvar esta página e ter acesso offline.
+            </p>
+            <p style="margin-top: 20px;">
+                <strong>Projeto: Vitrola em Papelão</strong><br>
+                Trabalho Escolar • 2025
+            </p>
+        </footer>
+    </div>
+    
+    <script>
+        console.log('%c🎨 Galeria de Templates - Vitrola em Papelão', 'font-size: 20px; color: #667eea; font-weight: bold;');
+        console.log('%cDica: Clique com botão direito nas imagens para salvar!', 'color: #27ae60;');
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="900" viewBox="0 0 900 900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="discGradientMPB" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#fffef0;stop-opacity:1" />
+      <stop offset="85%" style="stop-color:#fff8dc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f0e68c;stop-opacity:1" />
+    </radialGradient>
+    
+    <filter id="shadowMPB">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Círculo externo -->
+  <circle cx="450" cy="450" r="450" fill="url(#discGradientMPB)" filter="url(#shadowMPB)"/>
+  <circle cx="450" cy="450" r="448" fill="none" stroke="#2e8b57" stroke-width="3"/>
+  
+  <!-- Círculo interno (furo) -->
+  <circle cx="450" cy="450" r="200" fill="#fff" stroke="#888" stroke-width="2"/>
+  
+  <!-- Decoração ondulada no topo -->
+  <path d="M 250 160 Q 280 150, 310 160 T 370 160 T 430 160 T 490 160 T 550 160 T 610 160 T 650 160" 
+        fill="none" stroke="#2e8b57" stroke-width="2"/>
+  <path d="M 250 190 Q 280 180, 310 190 T 370 190 T 430 190 T 490 190 T 550 190 T 610 190 T 650 190" 
+        fill="none" stroke="#2e8b57" stroke-width="2"/>
+  
+  <!-- Logo/Gravadora -->
+  <text x="450" y="240" text-anchor="middle" font-family="Georgia, serif" font-size="36" font-weight="bold" fill="#2e8b57">
+    ≈ BOSSA RECORDS ≈
+  </text>
+  
+  <!-- Velocidade -->
+  <text x="450" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#555">
+    45 RPM
+  </text>
+  
+  <!-- Título da música -->
+  <text x="450" y="680" text-anchor="middle" font-family="Georgia, serif" font-size="40" font-weight="bold" font-style="italic" fill="#000">
+    "Garota de Ipanema"
+  </text>
+  
+  <!-- Artista -->
+  <text x="450" y="730" text-anchor="middle" font-family="Georgia, serif" font-size="32" fill="#2e8b57">
+    TOM JOBIM
+  </text>
+  
+  <!-- Informações adicionais -->
+  <text x="450" y="770" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#666">
+    LADO A  •  2:45
+  </text>
+  
+  <text x="450" y="800" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#999">
+    🎵 Bossa Nova • 1964
+  </text>
+  
+  <!-- Decoração ondulada na base -->
+  <path d="M 250 830 Q 280 820, 310 830 T 370 830 T 430 830 T 490 830 T 550 830 T 610 830 T 650 830" 
+        fill="none" stroke="#2e8b57" stroke-width="2"/>
+</svg>
+

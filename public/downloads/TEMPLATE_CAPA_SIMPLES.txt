@@ -1,0 +1,166 @@
+# TEMPLATE: CAPA SIMPLES DE DISCO 7"
+
+## Instruções:
+1. Use este template em qualquer editor de texto/imagem
+2. Substitua os textos entre [colchetes]
+3. Dimensões: 18,5 cm x 37 cm (dobra ao meio = 18,5 x 18,5 cm)
+4. Imprima em papel 120-180g
+
+═══════════════════════════════════════════
+           TEMPLATE DE CAPA 7"
+           Tamanho Final: 18,5 x 18,5 cm
+═══════════════════════════════════════════
+
+
+┌─────────────────────────────────────────┐
+│                                         │
+│            === FRENTE ===               │
+│                                         │
+│  ┌─────────────────────────────────┐   │
+│  │                                 │   │
+│  │                                 │   │
+│  │      [ESPAÇO PARA FOTO]         │   │
+│  │      [OU ARTWORK]               │   │
+│  │                                 │   │
+│  │      Sugestão: 13 x 13 cm       │   │
+│  │                                 │   │
+│  │                                 │   │
+│  └─────────────────────────────────┘   │
+│                                         │
+│  ───────────────────────────────────    │
+│                                         │
+│                                         │
+│      [NOME DO ARTISTA]                  │
+│      (Fonte grande, negrito)            │
+│                                         │
+│      "[Título da Música]"               │
+│      (Fonte média, itálico)             │
+│                                         │
+│                                         │
+│  ⊙ 45 RPM    •    [ANO]                │
+│                                         │
+│  [LOGO DA GRAVADORA]                    │
+│                                         │
+│                                         │
+└─────────────────────────────────────────┘
+           18,5 cm (largura)
+
+─ ─ ─ ─ ─ ─ ─ DOBRAR AQUI ─ ─ ─ ─ ─ ─ ─
+
+┌─────────────────────────────────────────┐
+│                                         │
+│            === VERSO ===                │
+│                                         │
+│                                         │
+│  LADO A                                 │
+│  ──────                                 │
+│  1. [Título da Música] ........... 3:45 │
+│                                         │
+│                                         │
+│  LADO B                                 │
+│  ──────                                 │
+│  1. [Título da Música B] ......... 4:12 │
+│                                         │
+│                                         │
+│  ───────────────────────────────────    │
+│                                         │
+│  Artista: [Nome do Artista]             │
+│  Produção: [Nome do Produtor]           │
+│  Gravadora: [Nome da Gravadora]         │
+│  Ano: [Ano de Lançamento]              │
+│  Catálogo: [Número de Catálogo]         │
+│                                         │
+│                                         │
+│  © [Ano] [Gravadora]. Todos os          │
+│  direitos reservados.                   │
+│                                         │
+│                                         │
+│  [Opcional: Código de Barras]           │
+│                                         │
+└─────────────────────────────────────────┘
+           18,5 cm (largura)
+
+
+═══════════════════════════════════════════
+           TOTAL: 18,5 cm x 37 cm
+          (Dobrar no meio = 18,5 x 18,5)
+═══════════════════════════════════════════
+
+
+## EXEMPLOS PREENCHIDOS:
+
+### Exemplo 1: Rock Clássico
+─────────────────────────────────────────
+FRENTE:
+    [FOTO: Banda em P&B]
+    THE BEATLES
+    "Hey Jude"
+    ⊙ 45 RPM • 1968
+    APPLE RECORDS
+─────────────────────────────────────────
+
+### Exemplo 2: MPB
+─────────────────────────────────────────
+FRENTE:
+    [ARTE: Ilustração colorida]
+    TOM JOBIM
+    "Garota de Ipanema"
+    ⊙ 45 RPM • 1964
+    VERVE RECORDS
+─────────────────────────────────────────
+
+### Exemplo 3: Soul
+─────────────────────────────────────────
+FRENTE:
+    [FOTO: Close do artista]
+    ARETHA FRANKLIN
+    "Respect"
+    ⊙ 45 RPM • 1967
+    ATLANTIC RECORDS
+─────────────────────────────────────────
+
+
+## DICAS DE DESIGN:
+
+1. Cores:
+   - Rock: Preto/Branco, Vermelho
+   - Soul: Laranja, Marrom, Dourado
+   - MPB: Verde, Azul, Amarelo
+   - Pop: Cores vibrantes
+
+2. Fontes:
+   - Anos 60: Serif, elegantes
+   - Anos 70: Bold, coloridas
+   - Anos 80: Futuristas
+   - Moderno: Sans-serif, clean
+
+3. Layout:
+   - Mantenha margens de 1 cm
+   - Centralize elementos importantes
+   - Use hierarquia visual
+   - Menos é mais!
+
+
+## COMO USAR NO CANVA:
+
+1. Acesse canva.com
+2. Crie design personalizado: 18,5 x 37 cm
+3. Adicione elementos conforme o template
+4. Baixe em alta qualidade (PDF ou PNG)
+5. Imprima em papel de qualidade
+
+
+## COMO USAR NO WORD:
+
+1. Configurar página: 18,5 x 37 cm
+2. Inserir caixas de texto
+3. Inserir imagens
+4. Ajustar fontes e cores
+5. Salvar como PDF
+6. Imprimir
+
+
+═══════════════════════════════════════════
+Bom trabalho! Suas capas ficarão incríveis!
+═══════════════════════════════════════════
+

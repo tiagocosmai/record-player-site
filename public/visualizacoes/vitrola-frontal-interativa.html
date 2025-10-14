@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitrola Versão Frontal - Visualização Interativa</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 20px;
+            background: #f8f9fa;
+            flex-wrap: wrap;
+        }
+
+        button {
+            padding: 12px 24px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            background: #667eea;
+            color: white;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+
+        button:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        button.active {
+            background: #e74c3c;
+        }
+
+        .view-container {
+            padding: 40px;
+            min-height: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .view {
+            display: none;
+        }
+
+        .view.active {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .info {
+            background: #e8f4f8;
+            padding: 20px;
+            margin: 20px 40px;
+            border-radius: 10px;
+            border-left: 5px solid #3498db;
+        }
+
+        .info h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .info ul {
+            margin-left: 20px;
+        }
+
+        .info li {
+            margin: 5px 0;
+            color: #34495e;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+        }
+
+        .keyboard-hint {
+            text-align: center;
+            padding: 15px;
+            background: #fff3cd;
+            color: #856404;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎵 Vitrola em Papelão</h1>
+            <p class="subtitle">Versão com Abertura Frontal Superior - Visualização Interativa</p>
+        </header>
+
+        <div class="keyboard-hint">
+            💡 Dica: Use as teclas <strong>1, 2, 3, 4, 5, 6</strong> para navegar rapidamente entre as vistas
+        </div>
+
+        <div class="controls">
+            <button onclick="showView(0)" id="btn0" class="active">Vista Frontal</button>
+            <button onclick="showView(1)" id="btn1">Vista Lateral (Corte)</button>
+            <button onclick="showView(2)" id="btn2">Vista Superior</button>
+            <button onclick="showView(3)" id="btn3">Perspectiva 3D</button>
+            <button onclick="showView(4)" id="btn4">Compartimento Discos</button>
+            <button onclick="showView(5)" id="btn5">Vista Explodida</button>
+        </div>
+
+        <div class="view-container">
+            <!-- Vista 1: Frontal -->
+            <div class="view active" id="view0">
+                <svg width="600" height="700" viewBox="0 0 600 700" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Corpo principal -->
+                    <rect x="50" y="100" width="500" height="500" fill="#8B4513" stroke="#5D2E0F" stroke-width="3"/>
+                    
+                    <!-- Tampa acrílico (recuada) -->
+                    <rect x="150" y="120" width="300" height="80" fill="#E0F7FF" stroke="#87CEEB" stroke-width="2" opacity="0.7"/>
+                    <circle cx="300" cy="160" r="30" fill="#333" stroke="#555" stroke-width="2"/>
+                    <circle cx="300" cy="160" r="15" fill="#C0C0C0"/>
+                    <text x="300" y="115" text-anchor="middle" font-size="14" fill="#555">Prato (recuado)</text>
+                    
+                    <!-- Abertura frontal inclinada -->
+                    <path d="M 100 220 L 140 360 L 460 360 L 500 220 Z" fill="#2C1810" stroke="#1A0F08" stroke-width="3"/>
+                    
+                    <!-- Discos visíveis na abertura -->
+                    <g id="discos">
+                        <ellipse cx="200" cy="290" rx="8" ry="40" fill="#000" stroke="#444" stroke-width="1"/>
+                        <ellipse cx="250" cy="290" rx="8" ry="40" fill="#1a1a1a" stroke="#444" stroke-width="1"/>
+                        <ellipse cx="300" cy="290" rx="8" ry="40" fill="#111" stroke="#444" stroke-width="1"/>
+                        <ellipse cx="350" cy="290" rx="8" ry="40" fill="#1a1a1a" stroke="#444" stroke-width="1"/>
+                        <ellipse cx="400" cy="290" rx="8" ry="40" fill="#000" stroke="#444" stroke-width="1"/>
+                        
+                        <!-- Rótulos dos discos -->
+                        <circle cx="200" cy="290" r="6" fill="#e74c3c"/>
+                        <circle cx="250" cy="290" r="6" fill="#3498db"/>
+                        <circle cx="300" cy="290" r="6" fill="#2ecc71"/>
+                        <circle cx="350" cy="290" r="6" fill="#f39c12"/>
+                        <circle cx="400" cy="290" r="6" fill="#9b59b6"/>
+                    </g>
+                    
+                    <text x="300" y="245" text-anchor="middle" font-size="14" fill="#fff">Discos Visíveis</text>
+                    
+                    <!-- Painel inferior -->
+                    <rect x="50" y="370" width="500" height="230" fill="#A0522D" stroke="#5D2E0F" stroke-width="3"/>
+                    
+                    <!-- Fita K7 -->
+                    <rect x="100" y="410" width="120" height="80" fill="#333" stroke="#000" stroke-width="2" rx="5"/>
+                    <rect x="110" y="420" width="100" height="60" fill="#555" stroke="#666" stroke-width="1"/>
+                    <circle cx="135" cy="450" r="15" fill="#333"/>
+                    <circle cx="185" cy="450" r="15" fill="#333"/>
+                    <text x="160" y="475" text-anchor="middle" font-size="10" fill="#fff">K7</text>
+                    
+                    <!-- Botões K7 -->
+                    <circle cx="270" cy="430" r="12" fill="#444" stroke="#666" stroke-width="2"/>
+                    <circle cx="310" cy="430" r="12" fill="#444" stroke="#666" stroke-width="2"/>
+                    <circle cx="270" cy="470" r="12" fill="#444" stroke="#666" stroke-width="2"/>
+                    <circle cx="310" cy="470" r="12" fill="#444" stroke="#666" stroke-width="2"/>
+                    
+                    <!-- Símbolos botões -->
+                    <text x="270" y="435" text-anchor="middle" font-size="14" fill="#fff">⏪</text>
+                    <text x="310" y="435" text-anchor="middle" font-size="14" fill="#fff">■</text>
+                    <text x="270" y="475" text-anchor="middle" font-size="14" fill="#fff">▶</text>
+                    <text x="310" y="475" text-anchor="middle" font-size="14" fill="#fff">⏩</text>
+                    
+                    <!-- Botões grandes -->
+                    <circle cx="450" cy="440" r="35" fill="#555" stroke="#777" stroke-width="3"/>
+                    <circle cx="450" cy="540" r="35" fill="#555" stroke="#777" stroke-width="3"/>
+                    
+                    <!-- Ponteiros -->
+                    <line x1="450" y1="440" x2="465" y2="425" stroke="#fff" stroke-width="3"/>
+                    <line x1="450" y1="540" x2="465" y2="525" stroke="#fff" stroke-width="3"/>
+                    
+                    <text x="450" y="490" text-anchor="middle" font-size="12" fill="#fff">FREQ</text>
+                    <text x="450" y="590" text-anchor="middle" font-size="12" fill="#fff">VOL</text>
+                    
+                    <!-- Pés -->
+                    <rect x="80" y="610" width="30" height="50" fill="#654321" stroke="#3E2723" stroke-width="2" rx="5"/>
+                    <rect x="490" y="610" width="30" height="50" fill="#654321" stroke="#3E2723" stroke-width="2" rx="5"/>
+                    
+                    <!-- Título -->
+                    <text x="300" y="680" text-anchor="middle" font-size="24" font-weight="bold" fill="#2c3e50">VISTA FRONTAL</text>
+                </svg>
+                
+                <div class="info">
+                    <h3>Vista Frontal - Características</h3>
+                    <ul>
+                        <li>Abertura frontal inclinada mostra os discos</li>
+                        <li>Prato giratório recuado (visível pela tampa de acrílico)</li>
+                        <li>Discos armazenados verticalmente e sempre visíveis</li>
+                        <li>Painel inferior com K7 e controles</li>
+                        <li>Visual vintage inspirado em móveis anos 60-70</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Vista 2: Lateral (Corte) -->
+            <div class="view" id="view1">
+                <svg width="600" height="700" viewBox="0 0 600 700" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Base -->
+                    <rect x="50" y="550" width="500" height="50" fill="#8B4513" stroke="#5D2E0F" stroke-width="3"/>
+                    
+                    <!-- Pés -->
+                    <rect x="80" y="600" width="30" height="50" fill="#654321" stroke="#3E2723" stroke-width="2" rx="5"/>
+                    <rect x="490" y="600" width="30" height="50" fill="#654321" stroke="#3E2723" stroke-width="2" rx="5"/>
+                    
+                    <!-- Corpo principal -->
+                    <rect x="50" y="100" width="500" height="450" fill="#A0522D" stroke="#5D2E0F" stroke-width="3"/>
+                    
+                    <!-- Divisória superior (prato) -->
+                    <rect x="50" y="150" width="500" height="20" fill="#6B3410" stroke="#3E2008" stroke-width="2"/>
+                    
+                    <!-- Tampa acrílico -->
+                    <rect x="300" y="90" width="200" height="60" fill="#E0F7FF" stroke="#87CEEB" stroke-width="2" opacity="0.7" rx="5"/>
+                    <circle cx="400" cy="120" r="25" fill="#333" stroke="#555" stroke-width="2"/>
+                    <text x="400" y="70" text-anchor="middle" font-size="14" fill="#2c3e50">Tampa Acrílico</text>
+                    
+                    <!-- Prato com eixo -->
+                    <line x1="400" y1="120" x2="400" y2="170" stroke="#888" stroke-width="3"/>
+                    <circle cx="400" cy="170" r="5" fill="#444"/>
+                    
+                    <!-- Compartimento de discos -->
+                    <rect x="80" y="250" width="180" height="150" fill="#2C1810" stroke="#1A0F08" stroke-width="2"/>
+                    
+                    <!-- Discos no compartimento -->
+                    <line x1="100" y1="260" x2="100" y2="390" stroke="#444" stroke-width="8"/>
+                    <line x1="120" y1="260" x2="120" y2="390" stroke="#555" stroke-width="8"/>
+                    <line x1="140" y1="260" x2="140" y2="390" stroke="#444" stroke-width="8"/>
+                    <line x1="160" y1="260" x2="160" y2="390" stroke="#555" stroke-width="8"/>
+                    <line x1="180" y1="260" x2="180" y2="390" stroke="#444" stroke-width="8"/>
+                    <line x1="200" y1="260" x2="200" y2="390" stroke="#555" stroke-width="8"/>
+                    <line x1="220" y1="260" x2="220" y2="390" stroke="#444" stroke-width="8"/>
+                    <line x1="240" y1="260" x2="240" y2="390" stroke="#555" stroke-width="8"/>
+                    
+                    <text x="170" y="330" text-anchor="middle" font-size="12" fill="#fff" font-weight="bold">DISCOS</text>
+                    
+                    <!-- Parede traseira do compartimento -->
+                    <rect x="260" y="250" width="15" height="150" fill="#6B3410" stroke="#3E2008" stroke-width="2"/>
+                    
+                    <!-- Painel frontal inclinado -->
+                    <polygon points="80,250 50,180 270,180 260,250" fill="#8B4513" stroke="#5D2E0F" stroke-width="3"/>
+                    
+                    <!-- Divisória inferior -->
+                    <rect x="50" y="410" width="500" height="15" fill="#6B3410" stroke="#3E2008" stroke-width="2"/>
+                    
+                    <!-- Painel frontal inferior -->
+                    <rect x="50" y="425" width="500" height="125" fill="#A0522D" stroke="#5D2E0F" stroke-width="3"/>
+                    
+                    <!-- K7 (lateral) -->
+                    <rect x="100" y="460" width="60" height="40" fill="#333" stroke="#000" stroke-width="2" rx="3"/>
+                    
+                    <!-- Anotações -->
+                    <text x="450" y="130" text-anchor="end" font-size="12" fill="#2c3e50">← Prato recuado</text>
+                    <text x="350" y="325" text-anchor="start" font-size="12" fill="#2c3e50">Compartimento</text>
+                    <text x="350" y="340" text-anchor="start" font-size="12" fill="#2c3e50">frontal (18cm)</text>
+                    <text x="450" y="490" text-anchor="start" font-size="12" fill="#2c3e50">← Painel K7</text>
+                    
+                    <!-- Medidas -->
+                    <line x1="560" y1="100" x2="560" y2="150" stroke="#e74c3c" stroke-width="2" marker-end="url(#arrowred)"/>
+                    <text x="570" y="130" font-size="14" fill="#e74c3c">5cm</text>
+                    
+                    <line x1="560" y1="170" x2="560" y2="410" stroke="#e74c3c" stroke-width="2" marker-end="url(#arrowred)"/>
+                    <text x="570" y="290" font-size="14" fill="#e74c3c">15cm</text>
+                    
+                    <line x1="560" y1="425" x2="560" y2="550" stroke="#e74c3c" stroke-width="2" marker-end="url(#arrowred)"/>
+                    <text x="570" y="490" font-size="14" fill="#e74c3c">10cm</text>
+                    
+                    <!-- Título -->
+                    <text x="300" y="680" text-anchor="middle" font-size="24" font-weight="bold" fill="#2c3e50">VISTA LATERAL (CORTE)</text>
+                    
+                    <!-- Marker para setas -->
+                    <defs>
+                        <marker id="arrowred" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+                            <polygon points="0,0 10,5 0,10" fill="#e74c3c"/>
+                        </marker>
+                    </defs>
+                </svg>
+                
+                <div class="info">
+                    <h3>Vista Lateral - Corte Transversal</h3>
+                    <ul>
+                        <li>Mostra a distribuição interna das seções</li>
+                        <li>Seção superior (25-30cm): Prato giratório recuado</li>
+                        <li>Seção média (10-25cm): Compartimento de discos</li>
+                        <li>Seção inferior (0-10cm): Painel com K7 e controles</li>
+                        <li>Discos ficam verticais e visíveis pela abertura frontal</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Vista 3: Superior -->
+            <div class="view" id="view2">
+                <svg width="700" height="700" viewBox="0 0 700 700" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Corpo externo -->
+                    <rect x="100" y="100" width="500" height="450" fill="#A0522D" stroke="#5D2E0F" stroke-width="4"/>
+                    
+                    <!-- Lateral traseira -->
+                    <text x="350" y="130" text-anchor="middle" font-size="14" fill="#2c3e50" font-weight="bold">LATERAL TRASEIRA</text>
+                    
+                    <!-- Tampa de acrílico -->
+                    <rect x="300" y="160" width="250" height="300" fill="#E0F7FF" stroke="#87CEEB" stroke-width="3" opacity="0.6" rx="5"/>
+                    <text x="425" y="190" text-anchor="middle" font-size="12" fill="#2c3e50">Tampa Acrílico</text>
+                    
+                    <!-- Prato -->
+                    <circle cx="425" cy="310" r="80" fill="#333" stroke="#555" stroke-width="3"/>
+                    <circle cx="425" cy="310" r="50" fill="#1a1a1a"/>
+                    <circle cx="425" cy="310" r="20" fill="#C0C0C0"/>
+                    
+                    <!-- Braço -->
+                    <rect x="520" y="290" width="60" height="15" fill="#666" stroke="#444" stroke-width="2" rx="7"/>
+                    <circle cx="530" cy="297" r="12" fill="#555" stroke="#333" stroke-width="2"/>
+                    <circle cx="580" cy="297" r="5" fill="#e74c3c"/>
+                    <text x="540" y="340" text-anchor="middle" font-size="11" fill="#2c3e50">Braço</text>
+                    
+                    <!-- Compartimento de discos (frontal) -->
+                    <rect x="140" y="480" width="420" height="50" fill="#2C1810" stroke="#1A0F08" stroke-width="2"/>
+                    
+                    <!-- Discos no compartimento (vista de cima) -->
+                    <ellipse cx="180" cy="505" rx="15" ry="8" fill="#444" stroke="#666" stroke-width="1"/>
+                    <ellipse cx="220" cy="505" rx="15" ry="8" fill="#555" stroke="#666" stroke-width="1"/>
+                    <ellipse cx="260" cy="505" rx="15" ry="8" fill="#444" stroke="#666" stroke-width="1"/>
+                    <ellipse cx="300" cy="505" rx="15" ry="8" fill="#555" stroke="#666" stroke-width="1"/>
+                    <ellipse cx="340" cy="505" rx="15" ry="8" fill="#444" stroke="#666" stroke-width="1"/>
+                    <ellipse cx="380" cy="505" rx="15" ry="8" fill="#555" stroke="#666" stroke-width="1"/>
+                    <ellipse cx="420" cy="505" rx="15" ry="8" fill="#444" stroke="#666" stroke-width="1"/>
+                    <ellipse cx="460" cy="505" rx="15" ry="8" fill="#555" stroke="#666" stroke-width="1"/>
+                    
+                    <text x="320" y="525" text-anchor="middle" font-size="11" fill="#fff" font-weight="bold">COMPARTIMENTO DISCOS</text>
+                    
+                    <!-- Parede do compartimento -->
+                    <rect x="140" y="460" width="420" height="20" fill="#8B4513" stroke="#5D2E0F" stroke-width="2"/>
+                    
+                    <!-- Laterais -->
+                    <text x="70" y="300" text-anchor="middle" font-size="11" fill="#2c3e50" transform="rotate(-90 70 300)">LATERAL ESQUERDA</text>
+                    <text x="630" y="300" text-anchor="middle" font-size="11" fill="#2c3e50" transform="rotate(90 630 300)">LATERAL DIREITA</text>
+                    
+                    <!-- Medidas -->
+                    <line x1="100" y1="80" x2="600" y2="80" stroke="#e74c3c" stroke-width="2"/>
+                    <text x="350" y="70" text-anchor="middle" font-size="14" fill="#e74c3c" font-weight="bold">35 cm</text>
+                    
+                    <line x1="80" y1="100" x2="80" y2="550" stroke="#e74c3c" stroke-width="2"/>
+                    <text x="60" y="325" text-anchor="middle" font-size="14" fill="#e74c3c" font-weight="bold" transform="rotate(-90 60 325)">30 cm</text>
+                    
+                    <!-- Anotações com setas -->
+                    <text x="200" y="280" font-size="11" fill="#2c3e50">Prato recuado</text>
+                    <line x1="250" y1="285" x2="345" y2="310" stroke="#3498db" stroke-width="2" marker-end="url(#arrowblue)"/>
+                    
+                    <text x="150" y="420" font-size="11" fill="#2c3e50">Compartimento</text>
+                    <text x="150" y="435" font-size="11" fill="#2c3e50">(18cm prof.)</text>
+                    <line x1="230" y1="425" x2="280" y2="490" stroke="#3498db" stroke-width="2" marker-end="url(#arrowblue)"/>
+                    
+                    <!-- Título -->
+                    <text x="350" y="630" text-anchor="middle" font-size="24" font-weight="bold" fill="#2c3e50">VISTA SUPERIOR</text>
+                    
+                    <!-- Legenda -->
+                    <rect x="150" y="570" width="400" height="50" fill="#f8f9fa" stroke="#dee2e6" stroke-width="2" rx="5"/>
+                    <text x="350" y="590" text-anchor="middle" font-size="12" fill="#495057">Nota: Prato fica atrás do compartimento de discos</text>
+                    <text x="350" y="608" text-anchor="middle" font-size="12" fill="#495057">Discos são acessados pela frente (abertura inclinada)</text>
+                    
+                    <!-- Markers -->
+                    <defs>
+                        <marker id="arrowblue" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+                            <polygon points="0,0 10,5 0,10" fill="#3498db"/>
+                        </marker>
+                    </defs>
+                </svg>
+                
+                <div class="info">
+                    <h3>Vista Superior - Layout Interno</h3>
+                    <ul>
+                        <li>Mostra a distribuição dos componentes por cima</li>
+                        <li>Prato giratório recuado na parte traseira</li>
+                        <li>Compartimento de discos na parte frontal (18cm de profundidade)</li>
+                        <li>Tampa de acrílico cobre apenas o prato</li>
+                        <li>Discos organizados verticalmente no compartimento frontal</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Vista 4: Perspectiva 3D -->
+            <div class="view" id="view3">
+                <svg width="700" height="700" viewBox="0 0 700 700" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Base -->
+                    <polygon points="150,550 200,600 550,600 600,550" fill="#8B4513" stroke="#5D2E0F" stroke-width="3"/>
+                    
+                    <!-- Pés frontais -->
+                    <rect x="200" y="600" width="25" height="50" fill="#654321" stroke="#3E2723" stroke-width="2" rx="3"/>
+                    <rect x="525" y="600" width="25" height="50" fill="#654321" stroke="#3E2723" stroke-width="2" rx="3"/>
+                    
+                    <!-- Face frontal -->
+                    <polygon points="150,150 150,550 200,600 200,200" fill="#A0522D" stroke="#5D2E0F" stroke-width="3"/>
+                    
+                    <!-- Face lateral direita -->
+                    <polygon points="150,150 600,150 600,550 150,550" fill="#8B4513" stroke="#5D2E0F" stroke-width="3"/>
+                    
+                    <!-- Tampa de acrílico (3D) -->
+                    <polygon points="400,120 550,120 550,350 400,350" fill="#E0F7FF" stroke="#87CEEB" stroke-width="2" opacity="0.5"/>
+                    <polygon points="400,120 420,100 570,100 550,120" fill="#B8E6FF" stroke="#87CEEB" stroke-width="2" opacity="0.5"/>
+                    <polygon points="550,120 570,100 570,330 550,350" fill="#D0F0FF" stroke="#87CEEB" stroke-width="2" opacity="0.5"/>
+                    
+                    <!-- Prato (3D) -->
+                    <circle cx="475" cy="235" r="50" fill="#333" stroke="#555" stroke-width="2"/>
+                    <circle cx="475" cy="235" r="30" fill="#1a1a1a"/>
+                    <circle cx="475" cy="235" r="12" fill="#C0C0C0"/>
+                    
+                    <!-- Abertura frontal inclinada -->
+                    <polygon points="180,250 220,390 180,390" fill="#2C1810" stroke="#1A0F08" stroke-width="2"/>
+                    
+                    <!-- Discos visíveis (3D) -->
+                    <ellipse cx="190" cy="320" rx="5" ry="30" fill="#444" stroke="#666" stroke-width="1"/>
+                    <ellipse cx="185" cy="330" rx="5" ry="30" fill="#555" stroke="#666" stroke-width="1"/>
+                    <ellipse cx="180" cy="340" rx="5" ry="30" fill="#444" stroke="#666" stroke-width="1"/>
+                    
+                    <!-- Painel inferior frontal -->
+                    <polygon points="150,400 150,550 200,600 200,450" fill="#A0522D" stroke="#5D2E0F" stroke-width="3"/>
+                    
+                    <!-- K7 (3D) -->
+                    <rect x="170" y="460" width="50" height="35" fill="#333" stroke="#000" stroke-width="2" rx="3"/>
+                    <rect x="175" y="465" width="40" height="25" fill="#555"/>
+                    
+                    <!-- Botões -->
+                    <circle cx="185" cy="520" r="8" fill="#444" stroke="#666" stroke-width="1"/>
+                    <circle cx="200" cy="520" r="8" fill="#444" stroke="#666" stroke-width="1"/>
+                    
+                    <!-- Anotações -->
+                    <text x="475" y="200" text-anchor="middle" font-size="12" fill="#2c3e50">Tampa</text>
+                    <text x="475" y="215" text-anchor="middle" font-size="12" fill="#2c3e50">Acrílico</text>
+                    
+                    <text x="190" y="300" text-anchor="middle" font-size="11" fill="#fff" font-weight="bold">Discos</text>
+                    
+                    <text x="300" y="300" text-anchor="middle" font-size="16" fill="#2c3e50" font-weight="bold">Abertura</text>
+                    <text x="300" y="320" text-anchor="middle" font-size="16" fill="#2c3e50" font-weight="bold">Frontal</text>
+                    <text x="300" y="340" text-anchor="middle" font-size="16" fill="#2c3e50" font-weight="bold">Inclinada</text>
+                    
+                    <!-- Setas indicativas -->
+                    <line x1="250" y1="310" x2="180" y2="340" stroke="#e74c3c" stroke-width="2" marker-end="url(#arrow)"/>
+                    
+                    <line x1="430" y1="200" x2="460" y2="220" stroke="#3498db" stroke-width="2" marker-end="url(#arrowb)"/>
+                    
+                    <!-- Título -->
+                    <text x="350" y="680" text-anchor="middle" font-size="24" font-weight="bold" fill="#2c3e50">PERSPECTIVA 3D</text>
+                    
+                    <!-- Markers -->
+                    <defs>
+                        <marker id="arrow" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+                            <polygon points="0,0 10,5 0,10" fill="#e74c3c"/>
+                        </marker>
+                        <marker id="arrowb" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+                            <polygon points="0,0 10,5 0,10" fill="#3498db"/>
+                        </marker>
+                    </defs>
+                </svg>
+                
+                <div class="info">
+                    <h3>Perspectiva 3D - Visão Isométrica</h3>
+                    <ul>
+                        <li>Mostra a vitrola em perspectiva tridimensional</li>
+                        <li>Destaque para a abertura frontal inclinada</li>
+                        <li>Tampa de acrílico recuada cobrindo apenas o prato</li>
+                        <li>Discos parcialmente visíveis através da abertura</li>
+                        <li>Estrutura geral e proporções do móvel</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Vista 5: Compartimento de Discos -->
+            <div class="view" id="view4">
+                <svg width="600" height="700" viewBox="0 0 600 700" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Título superior -->
+                    <text x="300" y="50" text-anchor="middle" font-size="20" font-weight="bold" fill="#2c3e50">COMPARTIMENTO DE DISCOS</text>
+                    <text x="300" y="75" text-anchor="middle" font-size="14" fill="#7f8c8d">(Vista Interna Frontal)</text>
+                    
+                    <!-- Moldura do compartimento -->
+                    <rect x="80" y="100" width="440" height="300" fill="#2C1810" stroke="#1A0F08" stroke-width="4" rx="10"/>
+                    
+                    <!-- Topo do compartimento -->
+                    <rect x="80" y="100" width="440" height="30" fill="#8B4513" stroke="#5D2E0F" stroke-width="2"/>
+                    <text x="300" y="120" text-anchor="middle" font-size="12" fill="#fff">Moldura Superior</text>
+                    
+                    <!-- Base do compartimento -->
+                    <rect x="80" y="370" width="440" height="30" fill="#8B4513" stroke="#5D2E0F" stroke-width="2"/>
+                    <text x="300" y="390" text-anchor="middle" font-size="12" fill="#fff">Piso do Compartimento</text>
+                    
+                    <!-- Divisórias verticais -->
+                    <rect x="170" y="130" width="8" height="240" fill="#6B3410" stroke="#3E2008" stroke-width="1"/>
+                    <rect x="260" y="130" width="8" height="240" fill="#6B3410" stroke="#3E2008" stroke-width="1"/>
+                    <rect x="350" y="130" width="8" height="240" fill="#6B3410" stroke="#3E2008" stroke-width="1"/>
+                    <rect x="440" y="130" width="8" height="240" fill="#6B3410" stroke="#3E2008" stroke-width="1"/>
+                    
+                    <!-- Discos (8 discos de 7") -->
+                    <!-- Seção 1 -->
+                    <circle cx="125" cy="250" r="60" fill="#000" stroke="#333" stroke-width="2"/>
+                    <circle cx="125" cy="250" r="15" fill="#e74c3c"/>
+                    <text x="125" y="255" text-anchor="middle" font-size="10" fill="#fff" font-weight="bold">ROCK</text>
+                    
+                    <!-- Seção 2 -->
+                    <circle cx="215" cy="250" r="60" fill="#1a1a1a" stroke="#333" stroke-width="2"/>
+                    <circle cx="215" cy="250" r="15" fill="#3498db"/>
+                    <text x="215" y="255" text-anchor="middle" font-size="10" fill="#fff" font-weight="bold">POP</text>
+                    
+                    <!-- Seção 3 -->
+                    <circle cx="305" cy="250" r="60" fill="#111" stroke="#333" stroke-width="2"/>
+                    <circle cx="305" cy="250" r="15" fill="#2ecc71"/>
+                    <text x="305" y="255" text-anchor="middle" font-size="10" fill="#fff" font-weight="bold">MPB</text>
+                    
+                    <!-- Seção 4 -->
+                    <circle cx="395" cy="250" r="60" fill="#1a1a1a" stroke="#333" stroke-width="2"/>
+                    <circle cx="395" cy="250" r="15" fill="#f39c12"/>
+                    <text x="395" cy="255" text-anchor="middle" font-size="10" fill="#fff" font-weight="bold">JAZZ</text>
+                    
+                    <!-- Anotações das seções -->
+                    <text x="125" y="340" text-anchor="middle" font-size="11" fill="#aaa">Seção 1</text>
+                    <text x="215" y="340" text-anchor="middle" font-size="11" fill="#aaa">Seção 2</text>
+                    <text x="305" y="340" text-anchor="middle" font-size="11" fill="#aaa">Seção 3</text>
+                    <text x="395" y="340" text-anchor="middle" font-size="11" fill="#aaa">Seção 4</text>
+                    
+                    <!-- Medidas -->
+                    <line x1="80" y1="440" x2="520" y2="440" stroke="#e74c3c" stroke-width="2"/>
+                    <text x="300" y="460" text-anchor="middle" font-size="14" fill="#e74c3c" font-weight="bold">28 cm (largura interna)</text>
+                    
+                    <line x1="550" y1="130" x2="550" y2="370" stroke="#e74c3c" stroke-width="2"/>
+                    <text x="570" y="260" text-anchor="middle" font-size="14" fill="#e74c3c" font-weight="bold" transform="rotate(90 570 260)">15 cm (altura)</text>
+                    
+                    <!-- Especificações -->
+                    <rect x="100" y="490" width="400" height="160" fill="#f8f9fa" stroke="#dee2e6" stroke-width="2" rx="8"/>
+                    <text x="300" y="515" text-anchor="middle" font-size="16" fill="#2c3e50" font-weight="bold">Especificações do Compartimento</text>
+                    
+                    <text x="120" y="540" font-size="13" fill="#495057">• Largura: 28 cm</text>
+                    <text x="120" y="560" font-size="13" fill="#495057">• Altura: 15 cm (útil para discos de 7")</text>
+                    <text x="120" y="580" font-size="13" fill="#495057">• Profundidade: 18 cm</text>
+                    <text x="120" y="600" font-size="13" fill="#495057">• Capacidade: 8-12 discos de 7" (17,5 cm)</text>
+                    <text x="120" y="620" font-size="13" fill="#495057">• Divisórias: 4 seções (opcional: 2-3 por seção)</text>
+                    <text x="120" y="640" font-size="13" fill="#495057">• Armazenamento: Vertical ou levemente inclinado</text>
+                </svg>
+                
+                <div class="info">
+                    <h3>Compartimento de Discos - Detalhes</h3>
+                    <ul>
+                        <li>Compartimento frontal acessível pela abertura inclinada</li>
+                        <li>Divisórias verticais organizam os discos em 4 seções</li>
+                        <li>Cada seção pode armazenar 2-3 discos de 7"</li>
+                        <li>Discos ficam verticais e sempre visíveis</li>
+                        <li>Molduras superior e inferior dão acabamento</li>
+                        <li>Design permite fácil visualização e acesso</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Vista 6: Explodida -->
+            <div class="view" id="view5">
+                <svg width="700" height="900" viewBox="0 0 700 900" xmlns="http://www.w3.org/2000/svg">
+                    <text x="350" y="40" text-anchor="middle" font-size="24" font-weight="bold" fill="#2c3e50">VISTA EXPLODIDA</text>
+                    <text x="350" y="65" text-anchor="middle" font-size="14" fill="#7f8c8d">(Todas as Peças Separadas)</text>
+                    
+                    <!-- Peça 1: Tampa de Acrílico -->
+                    <rect x="250" y="100" width="200" height="130" fill="#E0F7FF" stroke="#87CEEB" stroke-width="2" opacity="0.7" rx="5"/>
+                    <text x="350" y="170" text-anchor="middle" font-size="14" fill="#2c3e50" font-weight="bold">Tampa de Acrílico</text>
+                    <text x="350" y="190" text-anchor="middle" font-size="11" fill="#34495e">25 x 20 cm</text>
+                    <line x1="350" y1="230" x2="350" y2="260" stroke="#95a5a6" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowgray)"/>
+                    
+                    <!-- Peça 2: Prato + Braço -->
+                    <g transform="translate(350, 280)">
+                        <circle cx="0" cy="0" r="50" fill="#333" stroke="#555" stroke-width="2"/>
+                        <circle cx="0" cy="0" r="30" fill="#1a1a1a"/>
+                        <circle cx="0" cy="0" r="12" fill="#C0C0C0"/>
+                        <rect x="45" y="-10" width="50" height="15" fill="#666" stroke="#444" stroke-width="2" rx="7"/>
+                        <text x="0" y="70" text-anchor="middle" font-size="14" fill="#2c3e50" font-weight="bold">Prato + Braço</text>
+                        <text x="0" y="85" text-anchor="middle" font-size="11" fill="#34495e">⌀ 20 cm</text>
+                    </g>
+                    <line x1="350" y1="365" x2="350" y2="390" stroke="#95a5a6" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowgray)"/>
+                    
+                    <!-- Peça 3: Divisória Superior -->
+                    <rect x="200" y="405" width="300" height="15" fill="#6B3410" stroke="#3E2008" stroke-width="2"/>
+                    <text x="350" y="435" text-anchor="middle" font-size="14" fill="#2c3e50" font-weight="bold">Divisória Superior</text>
+                    <text x="350" y="450" text-anchor="middle" font-size="11" fill="#34495e">35 x 30 cm (altura: 25cm)</text>
+                    <line x1="350" y1="455" x2="350" y2="480" stroke="#95a5a6" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowgray)"/>
+                    
+                    <!-- Peça 4: Painel Frontal Inclinado -->
+                    <path d="M 250 500 L 290 560 L 410 560 L 450 500 Z" fill="#8B4513" stroke="#5D2E0F" stroke-width="2"/>
+                    <text x="350" y="575" text-anchor="middle" font-size="14" fill="#2c3e50" font-weight="bold">Painel Frontal Inclinado</text>
+                    <text x="350" y="590" text-anchor="middle" font-size="11" fill="#34495e">Trapezoidal (35-28 cm x 12 cm)</text>
+                    <line x1="350" y1="595" x2="350" y2="615" stroke="#95a5a6" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowgray)"/>
+                    
+                    <!-- Peça 5: Compartimento (Piso + Parede) -->
+                    <g transform="translate(350, 640)">
+                        <rect x="-80" y="-20" width="160" height="40" fill="#2C1810" stroke="#1A0F08" stroke-width="2"/>
+                        <rect x="-80" y="20" width="8" height="40" fill="#6B3410" stroke="#3E2008" stroke-width="1"/>
+                        <text x="0" y="75" text-anchor="middle" font-size="14" fill="#2c3e50" font-weight="bold">Compartimento Discos</text>
+                        <text x="0" y="90" text-anchor="middle" font-size="11" fill="#34495e">(Piso + Parede + Divisórias)</text>
+                    </g>
+                    <line x1="350" y1="730" x2="350" y2="750" stroke="#95a5a6" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowgray)"/>
+                    
+                    <!-- Peça 6: Divisória Inferior -->
+                    <rect x="200" y="765" width="300" height="12" fill="#6B3410" stroke="#3E2008" stroke-width="2"/>
+                    <text x="350" y="795" text-anchor="middle" font-size="14" fill="#2c3e50" font-weight="bold">Divisória Inferior</text>
+                    <text x="350" y="810" text-anchor="middle" font-size="11" fill="#34495e">35 x 30 cm (altura: 10cm)</text>
+                    <line x1="350" y1="815" x2="350" y2="835" stroke="#95a5a6" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowgray)"/>
+                    
+                    <!-- Peça 7: Painel Frontal Inferior -->
+                    <rect x="250" y="850" width="200" height="40" fill="#A0522D" stroke="#5D2E0F" stroke-width="2"/>
+                    <rect x="270" y="858" width="40" height="25" fill="#333" stroke="#000" stroke-width="1"/>
+                    <circle cx="340" cy="865" r="6" fill="#444"/>
+                    <circle cx="360" cy="865" r="6" fill="#444"/>
+                    
+                    <!-- Legenda do Painel -->
+                    <g transform="translate(560, 850)">
+                        <text x="0" y="0" font-size="12" fill="#2c3e50" font-weight="bold">Painel Frontal</text>
+                        <text x="0" y="15" font-size="10" fill="#34495e">Inferior com K7</text>
+                        <text x="0" y="28" font-size="10" fill="#34495e">e Botões</text>
+                    </g>
+                    
+                    <!-- Laterais esquemáticas -->
+                    <g transform="translate(50, 500)">
+                        <rect x="0" y="0" width="80" height="180" fill="#8B4513" stroke="#5D2E0F" stroke-width="2"/>
+                        <text x="40" y="190" text-anchor="middle" font-size="11" fill="#2c3e50">Laterais</text>
+                        <text x="40" y="203" text-anchor="middle" font-size="9" fill="#34495e">(2x)</text>
+                    </g>
+                    
+                    <g transform="translate(570, 500)">
+                        <rect x="0" y="0" width="80" height="180" fill="#8B4513" stroke="#5D2E0F" stroke-width="2"/>
+                        <text x="40" y="190" text-anchor="middle" font-size="11" fill="#2c3e50">Traseira</text>
+                    </g>
+                    
+                    <!-- Base -->
+                    <g transform="translate(250, 850)">
+                        <line x1="-100" y1="80" x2="100" y2="80" stroke="#95a5a6" stroke-width="2" stroke-dasharray="5,5"/>
+                        <rect x="-80" y="85" width="160" height="15" fill="#8B4513" stroke="#5D2E0F" stroke-width="2"/>
+                        <circle cx="-60" cy="105" r="8" fill="#654321"/>
+                        <circle cx="60" cy="105" r="8" fill="#654321"/>
+                        <text x="0" y="130" text-anchor="middle" font-size="14" fill="#2c3e50" font-weight="bold">Base + Pés (4x)</text>
+                    </g>
+                    
+                    <!-- Markers -->
+                    <defs>
+                        <marker id="arrowgray" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+                            <polygon points="0,0 10,5 0,10" fill="#95a5a6"/>
+                        </marker>
+                    </defs>
+                </svg>
+                
+                <div class="info">
+                    <h3>Vista Explodida - Componentes Principais</h3>
+                    <ul>
+                        <li><strong>Tampa de Acrílico:</strong> Cobre apenas o prato giratório</li>
+                        <li><strong>Prato + Braço:</strong> Sistema de reprodução (decorativo)</li>
+                        <li><strong>Divisória Superior:</strong> Piso do prato (25cm de altura)</li>
+                        <li><strong>Painel Frontal Inclinado:</strong> Moldura da abertura (15-20°)</li>
+                        <li><strong>Compartimento:</strong> Estrutura interna para discos</li>
+                        <li><strong>Divisória Inferior:</strong> Separa seção K7 (10cm altura)</li>
+                        <li><strong>Painel Frontal Inferior:</strong> Controles e K7</li>
+                        <li><strong>Base + Pés:</strong> Estrutura de sustentação</li>
+                        <li><strong>Laterais:</strong> 2 laterais + 1 traseira</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>🎵 Projeto: Vitrola em Papelão - Versão Abertura Frontal</p>
+            <p>📐 Para mais detalhes, consulte os arquivos de documentação do projeto</p>
+            <p>✨ Criado com ❤️ para projetos educacionais</p>
+        </footer>
+    </div>
+
+    <script>
+        let currentView = 0;
+        const totalViews = 6;
+
+        function showView(index) {
+            // Remove active class from all views and buttons
+            document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+            document.querySelectorAll('button').forEach(b => b.classList.remove('active'));
+            
+            // Add active class to selected view and button
+            document.getElementById('view' + index).classList.add('active');
+            document.getElementById('btn' + index).classList.add('active');
+            
+            currentView = index;
+        }
+
+        // Keyboard shortcuts
+        document.addEventListener('keydown', function(e) {
+            const key = parseInt(e.key);
+            if (key >= 1 && key <= totalViews) {
+                showView(key - 1);
+            }
+        });
+
+        // Arrow keys navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+                showView((currentView + 1) % totalViews);
+            } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+                showView((currentView - 1 + totalViews) % totalViews);
+            }
+        });
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,92 @@
+═══════════════════════════════════════════════════════════
+   🎨 INSTRUÇÕES RÁPIDAS - Arquivos Visuais
+═══════════════════════════════════════════════════════════
+
+
+📂 ARQUIVO PRINCIPAL: vitrola-interativa.html
+
+   ┌─────────────────────────────────────────────┐
+   │  1. DÊ DUPLO CLIQUE no arquivo             │
+   │                                             │
+   │  2. ABRE NO NAVEGADOR automaticamente      │
+   │                                             │
+   │  3. CLIQUE NOS BOTÕES para mudar vista     │
+   │                                             │
+   │  4. TIRE SCREENSHOTS (Print Screen)        │
+   │                                             │
+   │  5. USE na apresentação escolar!           │
+   └─────────────────────────────────────────────┘
+
+
+🎯 VISTAS DISPONÍVEIS:
+
+   ✓ Vista Frontal          (tecla: 1)
+   ✓ Vista Lateral c/ Nicho (tecla: 2)
+   ✓ Vista Lateral Lisa     (tecla: 3)
+   ✓ Vista Superior         (tecla: 4)
+   ✓ Vista Explodida        (tecla: 5)
+
+
+📸 COMO TIRAR SCREENSHOTS:
+
+   WINDOWS:
+   - Pressione: Print Screen (PrtSc)
+   - Abra Paint
+   - Ctrl+V (colar)
+   - Salvar como PNG
+
+   MAC:
+   - Pressione: Cmd + Shift + 4
+   - Selecione área
+   - Arquivo salvo na área de trabalho
+
+   LINUX:
+   - Pressione: Print Screen
+   - Ou use ferramenta Captura de Tela
+
+
+🖼️ CONVERTER SVG PARA PNG:
+
+   MÉTODO FÁCIL:
+   1. Arraste arquivo .svg para navegador
+   2. Botão direito → "Salvar imagem como"
+   3. Escolha PNG
+   4. Pronto!
+
+   ONLINE:
+   - CloudConvert.com (gratuito)
+   - Photopea.com (editor online)
+
+
+📁 ARQUIVOS INCLUSOS:
+
+   vitrola-interativa.html  → Página interativa ⭐
+   rotulo-exemplo.svg       → Rótulo estilo Rock
+   rotulo-mpb-exemplo.svg   → Rótulo estilo MPB
+   capa-exemplo.svg         → Capa completa
+
+
+💡 DICA PROFISSIONAL:
+
+   Para apresentar na escola:
+   1. Abra vitrola-interativa.html
+   2. Tire screenshot de cada vista (5 imagens)
+   3. Monte no PowerPoint/Google Slides
+   4. Mostre durante apresentação!
+
+
+✨ BONUS:
+
+   - Arquivos funcionam OFFLINE (sem internet)
+   - SVG = Vetorial (amplia sem perder qualidade)
+   - Pode editar textos e cores
+   - 100% gratuito e reutilizável
+
+
+═══════════════════════════════════════════════════════════
+   Qualquer dúvida, leia: README.md nesta pasta
+═══════════════════════════════════════════════════════════
+
+
+🚀 COMECE AGORA: Dê duplo clique em vitrola-interativa.html!
+

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1850" height="3700" viewBox="0 0 1850 3700" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2c3e50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#34495e;stop-opacity:1" />
+    </linearGradient>
+    
+    <filter id="shadowText">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+  
+  <!-- FRENTE (parte superior) -->
+  <g id="frente">
+    <!-- Fundo -->
+    <rect x="0" y="0" width="1850" height="1850" fill="url(#bgGradient)"/>
+    
+    <!-- Borda decorativa -->
+    <rect x="50" y="50" width="1750" height="1750" fill="none" stroke="#ecf0f1" stroke-width="4"/>
+    
+    <!-- Área da imagem (placeholder) -->
+    <rect x="250" y="200" width="1350" height="1000" fill="#1a252f" stroke="#ecf0f1" stroke-width="2"/>
+    <text x="925" y="650" text-anchor="middle" font-family="Arial" font-size="60" fill="#7f8c8d">
+      [ FOTO DO ARTISTA ]
+    </text>
+    <text x="925" y="730" text-anchor="middle" font-family="Arial" font-size="40" fill="#95a5a6">
+      ou ARTWORK
+    </text>
+    
+    <!-- Linha separadora -->
+    <line x1="300" y1="1280" x2="1550" y2="1280" stroke="#ecf0f1" stroke-width="3"/>
+    
+    <!-- Nome do artista -->
+    <text x="925" y="1420" text-anchor="middle" font-family="Impact, sans-serif" font-size="120" font-weight="bold" fill="#ecf0f1" filter="url(#shadowText)">
+      THE BEATLES
+    </text>
+    
+    <!-- Título da música -->
+    <text x="925" y="1550" text-anchor="middle" font-family="Georgia, serif" font-size="70" font-style="italic" fill="#bdc3c7">
+      "Hey Jude"
+    </text>
+    
+    <!-- Informações adicionais -->
+    <text x="925" y="1670" text-anchor="middle" font-family="Arial" font-size="40" fill="#95a5a6">
+      ⊙ 45 RPM  •  1968
+    </text>
+    
+    <!-- Logo da gravadora -->
+    <circle cx="925" cy="1770" r="50" fill="#e74c3c"/>
+    <text x="925" y="1785" text-anchor="middle" font-family="Arial" font-size="35" font-weight="bold" fill="#fff">
+      🍎
+    </text>
+    <text x="925" y="1820" text-anchor="middle" font-family="Arial" font-size="28" fill="#ecf0f1">
+      APPLE RECORDS
+    </text>
+  </g>
+  
+  <!-- Linha de dobra -->
+  <line x1="0" y1="1850" x2="1850" y2="1850" stroke="#333" stroke-width="4" stroke-dasharray="20,10"/>
+  <text x="925" y="1880" text-anchor="middle" font-family="Arial" font-size="30" fill="#333">
+    ─ ─ ─ ─ ─ DOBRAR AQUI ─ ─ ─ ─ ─
+  </text>
+  
+  <!-- VERSO (parte inferior) -->
+  <g id="verso">
+    <!-- Fundo -->
+    <rect x="0" y="1850" width="1850" height="1850" fill="#ecf0f1"/>
+    
+    <!-- Borda -->
+    <rect x="50" y="1900" width="1750" height="1750" fill="none" stroke="#34495e" stroke-width="4"/>
+    
+    <!-- Título LADO A -->
+    <text x="200" y="2100" font-family="Arial" font-size="50" font-weight="bold" fill="#2c3e50">
+      LADO A
+    </text>
+    <line x1="200" y1="2120" x2="500" y2="2120" stroke="#2c3e50" stroke-width="2"/>
+    
+    <!-- Música Lado A -->
+    <text x="200" y="2200" font-family="Arial" font-size="40" fill="#34495e">
+      1. Hey Jude
+    </text>
+    <text x="1500" y="2200" text-anchor="end" font-family="Arial" font-size="40" fill="#7f8c8d">
+      7:11
+    </text>
+    
+    <!-- Título LADO B -->
+    <text x="200" y="2350" font-family="Arial" font-size="50" font-weight="bold" fill="#2c3e50">
+      LADO B
+    </text>
+    <line x1="200" y1="2370" x2="500" y2="2370" stroke="#2c3e50" stroke-width="2"/>
+    
+    <!-- Música Lado B -->
+    <text x="200" y="2450" font-family="Arial" font-size="40" fill="#34495e">
+      1. Revolution
+    </text>
+    <text x="1500" y="2450" text-anchor="end" font-family="Arial" font-size="40" fill="#7f8c8d">
+      3:24
+    </text>
+    
+    <!-- Linha separadora -->
+    <line x1="200" y1="2550" x2="1650" y2="2550" stroke="#95a5a6" stroke-width="2"/>
+    
+    <!-- Informações de produção -->
+    <text x="200" y="2650" font-family="Arial" font-size="35" fill="#34495e">
+      Artista: The Beatles
+    </text>
+    <text x="200" y="2710" font-family="Arial" font-size="35" fill="#34495e">
+      Produção: George Martin
+    </text>
+    <text x="200" y="2770" font-family="Arial" font-size="35" fill="#34495e">
+      Gravadora: Apple Records
+    </text>
+    <text x="200" y="2830" font-family="Arial" font-size="35" fill="#34495e">
+      Ano: 1968
+    </text>
+    <text x="200" y="2890" font-family="Arial" font-size="35" fill="#34495e">
+      Catálogo: APPLE-2276
+    </text>
+    
+    <!-- Copyright -->
+    <text x="200" y="3050" font-family="Arial" font-size="30" fill="#7f8c8d">
+      © 1968 Apple Records Ltd.
+    </text>
+    <text x="200" y="3090" font-family="Arial" font-size="30" fill="#7f8c8d">
+      Todos os direitos reservados.
+    </text>
+    
+    <!-- Código de barras simulado -->
+    <g transform="translate(1300, 3000)">
+      <rect x="0" y="0" width="400" height="100" fill="#fff" stroke="#000" stroke-width="2"/>
+      <text x="200" y="60" text-anchor="middle" font-family="Courier" font-size="24" fill="#000">
+        || ||| || ||| | |||
+      </text>
+    </g>
+  </g>
+</svg>
+

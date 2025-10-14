@@ -1,0 +1,311 @@
+# TEMPLATE: RÓTULO PARA DISCO 7"
+
+## Instruções:
+1. Use este template como referência
+2. Dimensões: ⌀ 9 cm (externo), ⌀ 4 cm (furo interno)
+3. Imprima em papel adesivo (ideal) ou papel comum + cola
+4. Corte com precisão usando compasso ou cortador circular
+
+═══════════════════════════════════════════
+          TEMPLATE DE RÓTULO 7"
+          Diâmetro: 9 cm (externo)
+          Furo: 4 cm (interno)
+═══════════════════════════════════════════
+
+
+    Círculo Externo (⌀ 9 cm)
+          ╱───────────────╲
+         │                 │
+        │                   │
+       │  ┌──────────────┐  │
+       │  │  GRAVADORA   │  │ ← Topo: Logo ou nome
+       │  │  ─────────   │  │
+      │   │   45 RPM     │   │ ← Velocidade
+      │   │              │   │
+      │   │  ╱────────╮  │   │
+      │   │ │   ●     │  │   │ ← Furo (⌀ 4 cm)
+      │   │  ╲────────╯  │   │
+      │   │              │   │
+      │   │  "TÍTULO"    │   │ ← Título da música
+      │   │              │   │
+       │  │   Artista    │  │ ← Nome do artista
+       │  │              │  │
+       │  │   LADO A     │  │ ← Identificação do lado
+       │  └──────────────┘  │
+        │                   │
+         │                 │
+          ╲───────────────╯
+
+
+═══════════════════════════════════════════
+            LAYOUT DETALHADO
+═══════════════════════════════════════════
+
+┌─────────────────────────────────────────┐
+│                                         │
+│         RÓTULO LADO A                   │
+│                                         │
+│  Área 1 (Topo, 0-1,5 cm do centro):    │
+│  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  │
+│  [LOGO DA GRAVADORA]                    │
+│  ou                                     │
+│  [NOME DA GRAVADORA]                    │
+│  (Fonte: 10-12pt)                       │
+│                                         │
+│                                         │
+│  Área 2 (Superior, 1,5-2,5 cm):        │
+│  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  │
+│  45 RPM  ou  33⅓ RPM                   │
+│  (Fonte: 8-10pt)                        │
+│                                         │
+│                                         │
+│  Área 3 (Centro):                       │
+│  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  │
+│  [FURO CENTRAL - ⌀ 4 cm]              │
+│  (Deixe espaço em branco)               │
+│                                         │
+│                                         │
+│  Área 4 (Inferior, 2,5-3,5 cm):        │
+│  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  │
+│  "[TÍTULO DA MÚSICA]"                   │
+│  (Fonte: 12-14pt, negrito)              │
+│                                         │
+│                                         │
+│  Área 5 (Inferior, 3,5-4 cm):          │
+│  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  │
+│  [NOME DO ARTISTA]                      │
+│  (Fonte: 10-12pt)                       │
+│                                         │
+│                                         │
+│  Área 6 (Base, 4-4,5 cm):              │
+│  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  │
+│  LADO A  •  [Tempo: 3:45]              │
+│  Cat. No: [XX-123]                      │
+│  (Fonte: 6-8pt)                         │
+│                                         │
+└─────────────────────────────────────────┘
+
+
+═══════════════════════════════════════════
+           EXEMPLO COMPLETO: LADO A
+═══════════════════════════════════════════
+
+       ╱───────────────────────╲
+      │  ╔═══════════════════╗  │
+      │  ║  VINTAGE RECORDS  ║  │
+      │  ╚═══════════════════╝  │
+     │                           │
+     │         45 RPM            │
+     │                           │
+    │      ╱─────────────╮       │
+    │     │      ●       │       │
+    │      ╲─────────────╯       │
+    │                            │
+    │   "Paint It Black"         │
+    │                            │
+     │   THE ROLLING STONES      │
+     │                           │
+      │   LADO A  •  3:25        │
+      │   Cat. No: VR-1966-05    │
+       ╲───────────────────────╯
+
+
+═══════════════════════════════════════════
+           EXEMPLO COMPLETO: LADO B
+═══════════════════════════════════════════
+
+       ╱───────────────────────╲
+      │  ╔═══════════════════╗  │
+      │  ║  VINTAGE RECORDS  ║  │
+      │  ╚═══════════════════╝  │
+     │                           │
+     │         45 RPM            │
+     │                           │
+    │      ╱─────────────╮       │
+    │     │      ●       │       │
+    │      ╲─────────────╯       │
+    │                            │
+    │   "Stupid Girl"            │
+    │                            │
+     │   THE ROLLING STONES      │
+     │                           │
+      │   LADO B  •  2:56        │
+      │   Cat. No: VR-1966-05    │
+       ╲───────────────────────╯
+
+
+═══════════════════════════════════════════
+              VARIAÇÕES DE ESTILO
+═══════════════════════════════════════════
+
+ESTILO 1: Clássico (Anos 60)
+─────────────────────────────
+- Cores: Preto no fundo amarelo/vermelho
+- Fonte: Serif clássica
+- Logo proeminente no topo
+- Informações completas
+
+
+ESTILO 2: Minimalista (Moderno)
+────────────────────────────────
+- Cores: Preto e branco ou monocromático
+- Fonte: Sans-serif clean
+- Menos texto
+- Muito espaço em branco
+
+
+ESTILO 3: Colorido (Soul/Motown)
+─────────────────────────────────
+- Cores: Laranja, marrom, dourado
+- Fonte: Bold e expressiva
+- Padrões geométricos
+- Alegre e vibrante
+
+
+ESTILO 4: Vintage Brasil (MPB/Bossa)
+─────────────────────────────────────
+- Cores: Verde, amarelo, azul
+- Fonte: Elegante com serifa
+- Elementos tropicais
+- Clima descontraído
+
+
+═══════════════════════════════════════════
+            TEMPLATES POR GÊNERO
+═══════════════════════════════════════════
+
+╔═══════════════════════════════════════╗
+║           ROCK CLÁSSICO               ║
+╚═══════════════════════════════════════╝
+
+    ╱─────────────────────╲
+   │  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  │
+   │  ▓ ROCK RECORDS ▓   │
+   │  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  │
+  │        45 RPM         │
+  │    ╱─────────╮        │
+  │   │    ●     │        │
+  │    ╲─────────╯        │
+  │  "[MÚSICA]"           │
+  │   [ARTISTA]           │
+   │   LADO A  •  3:45   │
+    ╲─────────────────────╯
+
+
+╔═══════════════════════════════════════╗
+║            SOUL/MOTOWN                ║
+╚═══════════════════════════════════════╝
+
+    ╱─────────────────────╲
+   │  ★ ★ ★ ★ ★ ★ ★ ★ ★  │
+   │  ★  SOUL SOUNDS  ★   │
+   │  ★ ★ ★ ★ ★ ★ ★ ★ ★  │
+  │        45 RPM         │
+  │    ╱─────────╮        │
+  │   │    ●     │        │
+  │    ╲─────────╯        │
+  │  "[MÚSICA]"           │
+  │   [ARTISTA]           │
+   │   SIDE A  •  3:45   │
+    ╲─────────────────────╯
+
+
+╔═══════════════════════════════════════╗
+║           BOSSA NOVA/MPB              ║
+╚═══════════════════════════════════════╝
+
+    ╱─────────────────────╲
+   │  ≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈  │
+   │  ≈ BOSSA RECORDS ≈   │
+   │  ≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈  │
+  │        45 RPM         │
+  │    ╱─────────╮        │
+  │   │    ●     │        │
+  │    ╲─────────╯        │
+  │  "[MÚSICA]"           │
+  │   [ARTISTA]           │
+   │   LADO A  •  3:45   │
+    ╲─────────────────────╯
+
+
+╔═══════════════════════════════════════╗
+║            DISCO/FUNK                 ║
+╚═══════════════════════════════════════╝
+
+    ╱─────────────────────╲
+   │  ◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆  │
+   │  ◆  DISCO HITS  ◆    │
+   │  ◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆  │
+  │        45 RPM         │
+  │    ╱─────────╮        │
+  │   │    ●     │        │
+  │    ╲─────────╯        │
+  │  "[MÚSICA]"           │
+  │   [ARTISTA]           │
+   │   SIDE A  •  3:45   │
+    ╲─────────────────────╯
+
+
+═══════════════════════════════════════════
+         INFORMAÇÕES TÉCNICAS
+═══════════════════════════════════════════
+
+Medidas para Impressão:
+─────────────────────────
+• Diâmetro externo: 9 cm = 90 mm = 3.54"
+• Furo central: 4 cm = 40 mm = 1.57"
+• Resolução: 300 DPI
+• Formato: PNG ou PDF
+
+Configuração no Canva/Photoshop:
+─────────────────────────────────
+1. Criar documento circular 900 x 900 px
+2. Adicionar círculo interno (400 x 400 px) transparente
+3. Adicionar elementos entre os círculos
+4. Exportar em 300 DPI
+
+Impressão:
+──────────
+• Papel: Adesivo circular (ideal)
+• Alternativa: Papel comum + cola
+• Margem: Sem margem (sangria)
+• Qualidade: Alta/Melhor
+
+
+═══════════════════════════════════════════
+              COMO APLICAR
+═══════════════════════════════════════════
+
+MÉTODO 1: Papel Adesivo
+───────────────────────
+1. Imprima o rótulo
+2. Corte círculo externo (9 cm)
+3. Corte círculo interno (4 cm)
+4. Remova papel protetor
+5. Centralize no disco
+6. Cole firmemente
+7. Alise com cartão
+
+MÉTODO 2: Papel Comum + Cola
+─────────────────────────────
+1. Imprima o rótulo
+2. Corte círculos
+3. Aplique cola bastão
+4. Centralize no disco
+5. Pressione suavemente
+6. Alise com pano
+7. Deixe secar (15 min)
+
+DICA DE CENTRALIZAÇÃO:
+─────────────────────
+• Use o furo do disco como referência
+• Marque centro do rótulo com lápis leve
+• Alinhe os centros
+• Fixe devagar, do centro para fora
+
+
+═══════════════════════════════════════════
+    Seus discos ficarão com aparência
+         profissional de gravadora! 🎵
+═══════════════════════════════════════════
+

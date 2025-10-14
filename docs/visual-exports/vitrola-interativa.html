@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitrola em Papelão - Visualização Interativa</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-bottom: 2px solid #e9ecef;
+            flex-wrap: wrap;
+        }
+        
+        button {
+            padding: 12px 24px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        button.active {
+            background: #667eea;
+            color: white;
+        }
+        
+        button:not(.active) {
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+        
+        .view-container {
+            padding: 40px;
+            min-height: 600px;
+        }
+        
+        .view {
+            display: none;
+        }
+        
+        .view.active {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .svg-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            padding: 20px;
+            background: white;
+        }
+        
+        svg {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .dimensions {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        
+        .dimensions h3 {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+        
+        .dimensions p {
+            color: #856404;
+            line-height: 1.8;
+        }
+        
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .legend {
+            background: #e7f3ff;
+            border-left: 4px solid #2196F3;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        
+        .legend h3 {
+            color: #1976D2;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎵 Vitrola em Papelão</h1>
+            <p class="subtitle">Visualização Interativa - Todas as Vistas</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">Dimensões: 35cm × 30cm × 30cm</p>
+        </header>
+        
+        <div class="controls">
+            <button onclick="showView('frontal')" class="active" id="btn-frontal">Vista Frontal</button>
+            <button onclick="showView('lateral-nicho')" id="btn-lateral-nicho">Vista Lateral (Nicho)</button>
+            <button onclick="showView('lateral-sem-nicho')" id="btn-lateral-sem-nicho">Vista Lateral (Lisa)</button>
+            <button onclick="showView('superior')" id="btn-superior">Vista Superior</button>
+            <button onclick="showView('explodida')" id="btn-explodida">Vista Explodida</button>
+        </div>
+        
+        <div class="view-container">
+            <!-- Vista Frontal -->
+            <div id="view-frontal" class="view active">
+                <div class="svg-container">
+                    <svg viewBox="0 0 700 600" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Pés -->
+                        <rect x="80" y="520" width="30" height="50" fill="#8B4513" stroke="#654321" stroke-width="2"/>
+                        <rect x="270" y="520" width="30" height="50" fill="#8B4513" stroke="#654321" stroke-width="2"/>
+                        <rect x="400" y="520" width="30" height="50" fill="#8B4513" stroke="#654321" stroke-width="2"/>
+                        <rect x="590" y="520" width="30" height="50" fill="#8B4513" stroke="#654321" stroke-width="2"/>
+                        
+                        <!-- Corpo principal -->
+                        <rect x="50" y="270" width="600" height="250" fill="#D2B48C" stroke="#8B7355" stroke-width="3"/>
+                        
+                        <!-- Detalhes do painel frontal -->
+                        <!-- Compartimento K7 -->
+                        <rect x="120" y="370" width="110" height="75" fill="#333" stroke="#666" stroke-width="2"/>
+                        <text x="175" y="410" text-anchor="middle" font-family="Arial" font-size="14" fill="#fff">K7</text>
+                        
+                        <!-- Botões K7 -->
+                        <circle cx="280" cy="390" r="8" fill="#e74c3c"/>
+                        <circle cx="310" cy="390" r="8" fill="#e74c3c"/>
+                        <circle cx="280" cy="420" r="8" fill="#e74c3c"/>
+                        <circle cx="310" cy="420" r="8" fill="#e74c3c"/>
+                        
+                        <!-- Botões grandes -->
+                        <circle cx="550" cy="390" r="25" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+                        <text x="550" y="397" text-anchor="middle" font-family="Arial" font-size="12" fill="#fff">VOL</text>
+                        
+                        <circle cx="550" cy="460" r="25" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+                        <text x="550" y="467" text-anchor="middle" font-family="Arial" font-size="12" fill="#fff">FREQ</text>
+                        
+                        <!-- Tampa superior + prato -->
+                        <rect x="50" y="220" width="600" height="50" fill="#A0826D" stroke="#8B7355" stroke-width="3"/>
+                        
+                        <!-- Tampa acrílico -->
+                        <rect x="100" y="80" width="500" height="140" fill="rgba(200,230,255,0.3)" stroke="#4682B4" stroke-width="2" rx="5"/>
+                        
+                        <!-- Prato visível -->
+                        <circle cx="250" cy="150" r="60" fill="#1a1a1a" stroke="#000" stroke-width="2"/>
+                        <circle cx="250" cy="150" r="15" fill="#444"/>
+                        
+                        <!-- Braço -->
+                        <line x1="350" y1="150" x2="270" y2="150" stroke="#666" stroke-width="4"/>
+                        <circle cx="350" cy="150" r="10" fill="#888"/>
+                        
+                        <!-- Botão liga/desliga -->
+                        <rect x="550" y="135" width="30" height="30" fill="#e74c3c" stroke="#c0392b" stroke-width="2" rx="3"/>
+                        <text x="565" y="155" text-anchor="middle" font-family="Arial" font-size="16" fill="#fff">O</text>
+                    </svg>
+                </div>
+                
+                <div class="dimensions">
+                    <h3>📏 Dimensões Vista Frontal</h3>
+                    <p><strong>Largura:</strong> 35 cm<br>
+                    <strong>Altura total:</strong> 30 cm (25 cm corpo + 5 cm pés)<br>
+                    <strong>Elementos visíveis:</strong> Painel frontal com K7, botões, tampa acrílica, prato</p>
+                </div>
+            </div>
+            
+            <!-- Vista Lateral com Nicho -->
+            <div id="view-lateral-nicho" class="view">
+                <div class="svg-container">
+                    <svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Pés -->
+                        <rect x="80" y="520" width="30" height="50" fill="#8B4513" stroke="#654321" stroke-width="2"/>
+                        <rect x="460" y="520" width="30" height="50" fill="#8B4513" stroke="#654321" stroke-width="2"/>
+                        
+                        <!-- Corpo principal esquerdo -->
+                        <rect x="50" y="270" width="320" height="250" fill="#D2B48C" stroke="#8B7355" stroke-width="3"/>
+                        
+                        <!-- Nicho lateral (direito) -->
+                        <!-- Moldura superior -->
+                        <rect x="370" y="270" width="180" height="50" fill="#A0826D" stroke="#8B7355" stroke-width="3"/>
+                        <text x="460" y="300" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">MOLDURA</text>
+                        
+                        <!-- Abertura do nicho -->
+                        <rect x="370" y="320" width="180" height="175" fill="#555" stroke="#8B7355" stroke-width="3"/>
+                        
+                        <!-- Discos visíveis no nicho -->
+                        <ellipse cx="400" cy="380" rx="8" ry="60" fill="#1a1a1a" stroke="#000" stroke-width="1"/>
+                        <ellipse cx="420" cy="380" rx="8" ry="60" fill="#1a1a1a" stroke="#000" stroke-width="1"/>
+                        <ellipse cx="440" cy="380" rx="8" ry="60" fill="#1a1a1a" stroke="#000" stroke-width="1"/>
+                        <ellipse cx="460" cy="380" rx="8" ry="60" fill="#1a1a1a" stroke="#000" stroke-width="1"/>
+                        <ellipse cx="480" cy="380" rx="8" ry="60" fill="#1a1a1a" stroke="#000" stroke-width="1"/>
+                        <ellipse cx="500" cy="380" rx="8" ry="60" fill="#1a1a1a" stroke="#000" stroke-width="1"/>
+                        
+                        <!-- Base do nicho -->
+                        <rect x="370" y="495" width="180" height="25" fill="#D2B48C" stroke="#8B7355" stroke-width="3"/>
+                        
+                        <!-- Tampa superior + prato -->
+                        <rect x="50" y="220" width="500" height="50" fill="#A0826D" stroke="#8B7355" stroke-width="3"/>
+                        
+                        <!-- Tampa acrílico -->
+                        <rect x="100" y="80" width="400" height="140" fill="rgba(200,230,255,0.3)" stroke="#4682B4" stroke-width="2" rx="5"/>
+                        
+                        <!-- Prato (visto de lado) -->
+                        <ellipse cx="250" cy="150" rx="80" ry="10" fill="#1a1a1a" stroke="#000" stroke-width="2"/>
+                        
+                        <!-- Seta indicando acesso lateral -->
+                        <path d="M 580 380 L 600 380 L 590 370 M 600 380 L 590 390" stroke="#e74c3c" stroke-width="3" fill="none"/>
+                        <text x="560" y="355" font-family="Arial" font-size="14" fill="#e74c3c">ACESSO</text>
+                        <text x="560" y="370" font-family="Arial" font-size="14" fill="#e74c3c">LATERAL</text>
+                    </svg>
+                </div>
+                
+                <div class="dimensions">
+                    <h3>📏 Dimensões Vista Lateral (com Nicho)</h3>
+                    <p><strong>Profundidade:</strong> 30 cm (20 cm corpo + 10 cm nicho)<br>
+                    <strong>Altura nicho:</strong> 22,5 cm (17,5 cm discos + 5 cm moldura)<br>
+                    <strong>Característica:</strong> Nicho acessível pela lateral externa ← NOVO!</p>
+                </div>
+                
+                <div class="legend">
+                    <h3>💡 Detalhe Importante</h3>
+                    <p>O nicho tem <strong>acesso pela lateral</strong>, permitindo inserir e remover discos facilmente pela abertura externa. Os discos ficam verticais e visíveis!</p>
+                </div>
+            </div>
+            
+            <!-- Vista Lateral Lisa -->
+            <div id="view-lateral-sem-nicho" class="view">
+                <div class="svg-container">
+                    <svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Pés -->
+                        <rect x="80" y="520" width="30" height="50" fill="#8B4513" stroke="#654321" stroke-width="2"/>
+                        <rect x="460" y="520" width="30" height="50" fill="#8B4513" stroke="#654321" stroke-width="2"/>
+                        
+                        <!-- Corpo principal (lateral lisa) -->
+                        <rect x="50" y="270" width="500" height="250" fill="#D2B48C" stroke="#8B7355" stroke-width="3"/>
+                        
+                        <!-- Tampa superior -->
+                        <rect x="50" y="220" width="500" height="50" fill="#A0826D" stroke="#8B7355" stroke-width="3"/>
+                        
+                        <!-- Tampa acrílico -->
+                        <rect x="100" y="80" width="400" height="140" fill="rgba(200,230,255,0.3)" stroke="#4682B4" stroke-width="2" rx="5"/>
+                        
+                        <!-- Prato (visto de lado) -->
+                        <ellipse cx="250" cy="150" rx="80" ry="10" fill="#1a1a1a" stroke="#000" stroke-width="2"/>
+                    </svg>
+                </div>
+                
+                <div class="dimensions">
+                    <h3>📏 Dimensões Vista Lateral (Lisa)</h3>
+                    <p><strong>Profundidade:</strong> 30 cm<br>
+                    <strong>Altura:</strong> 30 cm total<br>
+                    <strong>Característica:</strong> Lateral sem nicho, completamente lisa</p>
+                </div>
+            </div>
+            
+            <!-- Vista Superior -->
+            <div id="view-superior" class="view">
+                <div class="svg-container">
+                    <svg viewBox="0 0 700 600" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Corpo principal -->
+                        <rect x="100" y="50" width="500" height="450" fill="#D2B48C" stroke="#8B7355" stroke-width="3"/>
+                        
+                        <!-- Nicho lateral (direita) -->
+                        <rect x="600" y="150" width="100" height="250" fill="#A0826D" stroke="#8B7355" stroke-width="3"/>
+                        <text x="650" y="280" text-anchor="middle" font-family="Arial" font-size="16" fill="#333" transform="rotate(90 650 280)">NICHO</text>
+                        
+                        <!-- Prato giratório -->
+                        <circle cx="280" cy="275" r="100" fill="#1a1a1a" stroke="#000" stroke-width="3"/>
+                        <circle cx="280" cy="275" r="25" fill="#444"/>
+                        
+                        <!-- Linhas do vinil -->
+                        <circle cx="280" cy="275" r="90" fill="none" stroke="#333" stroke-width="1"/>
+                        <circle cx="280" cy="275" r="80" fill="none" stroke="#333" stroke-width="1"/>
+                        <circle cx="280" cy="275" r="70" fill="none" stroke="#333" stroke-width="1"/>
+                        
+                        <!-- Braço -->
+                        <line x1="410" y1="200" x2="300" y2="260" stroke="#666" stroke-width="6" stroke-linecap="round"/>
+                        <circle cx="410" cy="200" r="15" fill="#888" stroke="#666" stroke-width="2"/>
+                        <circle cx="300" cy="260" r="8" fill="#e74c3c"/>
+                        
+                        <!-- Botão liga/desliga -->
+                        <rect x="520" y="100" width="40" height="40" fill="#e74c3c" stroke="#c0392b" stroke-width="2" rx="5"/>
+                        <text x="540" y="128" text-anchor="middle" font-family="Arial" font-size="20" fill="#fff">O</text>
+                        
+                        <!-- Dobradiça traseira (tampa acrílico) -->
+                        <rect x="150" y="60" width="400" height="20" fill="#666" stroke="#444" stroke-width="2"/>
+                        <text x="350" y="75" text-anchor="middle" font-family="Arial" font-size="12" fill="#fff">DOBRADIÇA</text>
+                        
+                        <!-- Setas indicando dimensões -->
+                        <line x1="90" y1="30" x2="610" y2="30" stroke="#e74c3c" stroke-width="2" marker-end="url(#arrowhead)"/>
+                        <text x="350" y="25" text-anchor="middle" font-family="Arial" font-size="16" fill="#e74c3c" font-weight="bold">35 cm</text>
+                        
+                        <line x1="80" y1="40" x2="80" y2="510" stroke="#e74c3c" stroke-width="2"/>
+                        <text x="60" y="280" text-anchor="middle" font-family="Arial" font-size="16" fill="#e74c3c" font-weight="bold" transform="rotate(-90 60 280)">30 cm</text>
+                    </svg>
+                </div>
+                
+                <div class="dimensions">
+                    <h3>📏 Dimensões Vista Superior</h3>
+                    <p><strong>Largura:</strong> 35 cm<br>
+                    <strong>Profundidade:</strong> 30 cm<br>
+                    <strong>Elementos:</strong> Prato giratório (⌀20 cm), braço com agulha, botão, dobradiça</p>
+                </div>
+            </div>
+            
+            <!-- Vista Explodida -->
+            <div id="view-explodida" class="view">
+                <div class="svg-container">
+                    <svg viewBox="0 0 700 900" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Tampa acrílico (topo) -->
+                        <rect x="200" y="20" width="300" height="60" fill="rgba(200,230,255,0.5)" stroke="#4682B4" stroke-width="2" rx="5"/>
+                        <text x="350" y="55" text-anchor="middle" font-family="Arial" font-size="16" fill="#1976D2">Tampa Acrílico (25x25cm)</text>
+                        
+                        <!-- Seta -->
+                        <line x1="350" y1="90" x2="350" y2="120" stroke="#999" stroke-width="2" stroke-dasharray="5,5"/>
+                        
+                        <!-- Tampa superior + prato -->
+                        <rect x="150" y="130" width="400" height="80" fill="#A0826D" stroke="#8B7355" stroke-width="2"/>
+                        <circle cx="280" cy="170" r="35" fill="#1a1a1a"/>
+                        <text x="450" y="155" font-family="Arial" font-size="14">Prato</text>
+                        <text x="450" y="175" font-family="Arial" font-size="14">⌀20cm</text>
+                        <line x1="380" y1="170" x2="240" y2="170" stroke="#666" stroke-width="3"/>
+                        <text x="450" y="195" font-family="Arial" font-size="14">Braço</text>
+                        
+                        <!-- Seta -->
+                        <line x1="350" y1="220" x2="350" y2="250" stroke="#999" stroke-width="2" stroke-dasharray="5,5"/>
+                        
+                        <!-- Corpo principal -->
+                        <rect x="100" y="260" width="500" height="200" fill="#D2B48C" stroke="#8B7355" stroke-width="3"/>
+                        <rect x="150" y="300" width="80" height="60" fill="#333"/>
+                        <text x="190" y="335" text-anchor="middle" font-family="Arial" font-size="12" fill="#fff">K7</text>
+                        <circle cx="270" cy="320" r="6" fill="#e74c3c"/>
+                        <circle cx="290" cy="320" r="6" fill="#e74c3c"/>
+                        <circle cx="270" cy="340" r="6" fill="#e74c3c"/>
+                        <circle cx="290" cy="340" r="6" fill="#e74c3c"/>
+                        <circle cx="450" cy="320" r="20" fill="#3498db"/>
+                        <circle cx="450" cy="380" r="20" fill="#3498db"/>
+                        
+                        <!-- Nicho (lateral) -->
+                        <rect x="600" y="300" width="80" height="140" fill="#A0826D" stroke="#8B7355" stroke-width="2"/>
+                        <text x="640" y="375" text-anchor="middle" font-family="Arial" font-size="12" fill="#333" transform="rotate(90 640 375)">NICHO</text>
+                        
+                        <!-- Seta -->
+                        <line x1="350" y1="470" x2="350" y2="500" stroke="#999" stroke-width="2" stroke-dasharray="5,5"/>
+                        
+                        <!-- Base -->
+                        <rect x="100" y="510" width="500" height="40" fill="#D2B48C" stroke="#8B7355" stroke-width="3"/>
+                        <text x="350" y="535" text-anchor="middle" font-family="Arial" font-size="16">Base (35x30cm)</text>
+                        
+                        <!-- Seta -->
+                        <line x1="350" y1="560" x2="350" y2="590" stroke="#999" stroke-width="2" stroke-dasharray="5,5"/>
+                        
+                        <!-- Pés -->
+                        <rect x="120" y="600" width="25" height="40" fill="#8B4513" stroke="#654321" stroke-width="2"/>
+                        <rect x="280" y="600" width="25" height="40" fill="#8B4513" stroke="#654321" stroke-width="2"/>
+                        <rect x="395" y="600" width="25" height="40" fill="#8B4513" stroke="#654321" stroke-width="2"/>
+                        <rect x="555" y="600" width="25" height="40" fill="#8B4513" stroke="#654321" stroke-width="2"/>
+                        <text x="350" y="670" text-anchor="middle" font-family="Arial" font-size="14">4 Pés (rolos papel, 5cm altura)</text>
+                        
+                        <!-- Legenda lateral -->
+                        <text x="50" y="170" font-family="Arial" font-size="14" fill="#666">1.</text>
+                        <text x="50" y="360" font-family="Arial" font-size="14" fill="#666">2.</text>
+                        <text x="50" y="530" font-family="Arial" font-size="14" fill="#666">3.</text>
+                        <text x="50" y="620" font-family="Arial" font-size="14" fill="#666">4.</text>
+                    </svg>
+                </div>
+                
+                <div class="dimensions">
+                    <h3>📏 Componentes (de cima para baixo)</h3>
+                    <p>
+                        <strong>1. Tampa Acrílico:</strong> 25×25 cm, transparente, com dobradiças<br>
+                        <strong>2. Tampa Superior:</strong> 35×30 cm, com recorte para prato (⌀22 cm)<br>
+                        <strong>3. Corpo Principal:</strong> 35×30×25 cm, com painel frontal e nicho lateral<br>
+                        <strong>4. Base:</strong> 35×30 cm, dupla para reforço<br>
+                        <strong>5. Pés:</strong> 4 rolos de papel higiênico, 5 cm altura
+                    </p>
+                </div>
+                
+                <div class="legend">
+                    <h3>✨ Altura Total</h3>
+                    <p><strong>30 cm</strong> = 5 cm (pés) + 25 cm (corpo) + tampa acrílico</p>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p><strong>Projeto: Vitrola em Papelão</strong></p>
+            <p>Trabalho Escolar • Dimensões Corrigidas: 35cm × 30cm × 30cm</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">
+                💡 Dica: Use Ctrl+S ou clique com botão direito → "Salvar como" para salvar esta página<br>
+                Depois, tire screenshots de cada vista para usar na apresentação!
+            </p>
+        </footer>
+    </div>
+    
+    <script>
+        function showView(viewName) {
+            // Esconde todas as vistas
+            const views = document.querySelectorAll('.view');
+            views.forEach(view => view.classList.remove('active'));
+            
+            // Remove active de todos os botões
+            const buttons = document.querySelectorAll('button');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            
+            // Mostra a vista selecionada
+            document.getElementById(`view-${viewName}`).classList.add('active');
+            document.getElementById(`btn-${viewName}`).classList.add('active');
+        }
+        
+        // Atalhos de teclado
+        document.addEventListener('keydown', function(e) {
+            if (e.key === '1') showView('frontal');
+            if (e.key === '2') showView('lateral-nicho');
+            if (e.key === '3') showView('lateral-sem-nicho');
+            if (e.key === '4') showView('superior');
+            if (e.key === '5') showView('explodida');
+        });
+        
+        console.log('%c🎵 Vitrola em Papelão - Visualização Interativa', 'font-size: 20px; color: #667eea; font-weight: bold;');
+        console.log('%cAtalhos de teclado: 1-5 para mudar de vista', 'color: #888;');
+        console.log('%cDica: Tire screenshots (Print Screen) de cada vista!', 'color: #27ae60;');
+    </script>
+</body>
+</html>
+
